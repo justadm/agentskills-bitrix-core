@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../../../" />
+        <title>Результаты выполнения задачи: обзор методов | REST API Битрикс24 и приложения для Маркет</title>
+        <meta name="generator" content="Diplodoc Platform v5.9.1">
+        <meta http-equiv="Content-Security-Policy" content="worker-src 'self';">
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        
+        <script type="application/javascript" src="_extensions/feedback-control-extension.js"></script>
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-5c42c2d82fe19c6e.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-34c68624e23be7ce.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/b24_custom.css?20241023-01"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/highlight_custom.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;Результат выполнения задачи — это закрепленный комментарий с итогами работы над задачей. Результат выделен отдельным блоком в карточке задачи, и его не надо искать среди всех комментариев. В задаче может быть несколько результатов.&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Быстрый переход: &lt;a href=\"api-reference/tasks/result/index.html#all-methods\"&gt;все методы и события&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Пользовательская документация: &lt;a href=\"https://helpdesk.bitrix24.ru/open/18135236/\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;как зафиксировать результат работы над задачей&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\"svyaz-rezultatov-s-drugimi-obuektami\"&gt;&lt;a href=\"api-reference/tasks/result/index.html#svyaz-rezultatov-s-drugimi-obuektami\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Связь результатов с другими объектами&lt;/span&gt;&lt;/a&gt;Связь результатов с другими объектами&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Задача.&lt;/strong&gt; Результаты привязаны к задаче по идентификатору &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-ycavm3ok\"&gt;taskId&lt;/code&gt;. Получить его можно методом &lt;a href=\"api-reference/tasks/tasks-task-add.html\"&gt;создания новой задачи&lt;/a&gt; или методом &lt;a href=\"api-reference/tasks/tasks-task-list.html\"&gt;получения списка задач&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Комментарий.&lt;/strong&gt; Результат задачи создается из комментария по идентификатору &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-7wqdipr7\"&gt;commentId&lt;/code&gt;. Получить идентификатор комментария можно методом &lt;a href=\"api-reference/tasks/comment-item/task-comment-item-add.html\"&gt;создания комментария&lt;/a&gt; или методом &lt;a href=\"api-reference/tasks/comment-item/task-comment-item-get-list.html\"&gt;получения списка комментариев&lt;/a&gt; задачи.&lt;/p&gt;\n&lt;div class=\"yfm-note yfm-accent-tip\" note-type=\"tip\"&gt;&lt;p class=\"yfm-note-title\"&gt;Пользовательская документация&lt;/p&gt;\n&lt;div class=\"yfm-note-content\"&gt;&lt;ul&gt;\n&lt;li&gt;&lt;a href=\"https://helpdesk.bitrix24.ru/open/17962166/\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Задачи Битрикс24&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;/div&gt;&lt;h2 id=\"kak-udalit-kommentarij\"&gt;&lt;a href=\"api-reference/tasks/result/index.html#kak-udalit-kommentarij\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Как удалить комментарий&lt;/span&gt;&lt;/a&gt;Как удалить комментарий&lt;/h2&gt;\n&lt;p&gt;Метод &lt;a href=\"api-reference/tasks/result/tasks-task-result-delete-from-comment.html\"&gt;tasks.task.result.deleteFromComment&lt;/a&gt; не удаляет комментарий, только снимает фиксацию в качестве результата. Чтобы удалить комментарий с результатом используйте метод &lt;a href=\"api-reference/tasks/comment-item/task-comment-item-delete.html\"&gt;task.commentitem.delete&lt;/a&gt;.&lt;/p&gt;\n&lt;h2 id=\"all-methods\"&gt;&lt;a href=\"api-reference/tasks/result/index.html#all-methods\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Обзор методов&lt;/span&gt;&lt;/a&gt;Обзор методов&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Scope: &lt;a href=\"api-reference/scopes/permissions.html\"&gt;&lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-2duegccu\"&gt;task&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Кто может выполнять метод: любой пользователь с доступом к задаче&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;table&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Метод&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Описание&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/tasks/result/tasks-task-result-add-from-comment.html\"&gt;tasks.task.result.addFromComment&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Добавляет комментарий в результат&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/tasks/result/tasks-task-result-list.html\"&gt;tasks.task.result.list&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Получает список результатов задачи&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/tasks/result/tasks-task-result-delete-from-comment.html\"&gt;tasks.task.result.deleteFromComment&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Удаляет комментарий из результата задачи&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;div class=\"yfm inline_code_tooltip\" id=\"tooltip_inline_clipboard_dialog\" role=\"dialog\"&gt;Скопировано&lt;/div&gt;","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.9.1"}],"style":["_assets/style/b24_custom.css?20241023-01","_assets/style/highlight_custom.css"],"script":["_assets/b24loc.js?20240925-02","_assets/b24addons.js?20241208-01"]},"headings":[{"title":"Связь результатов с другими объектами","href":"api-reference/tasks/result/index.html#svyaz-rezultatov-s-drugimi-obuektami","level":2},{"title":"Как удалить комментарий","href":"api-reference/tasks/result/index.html#kak-udalit-kommentarij","level":2},{"title":"Обзор методов","href":"api-reference/tasks/result/index.html#all-methods","level":2}],"title":"Результаты выполнения задачи: обзор методов"},"router":{"pathname":"api-reference/tasks/result/index","depth":4,"base":"../../../"},"lang":"ru","langs":["ru"],"viewerInterface":{"toc":true,"search":true,"feedback":true},"search":{"enabled":true,"provider":"local","api":"_search/api.js","link":"_search/ru/index.html"}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript">
+            window.feedbackControlExtensionInit({"endpoint":"https://util.1c-bitrix.ru/rest-doc/feedback-control.php"})
+        </script>
+        <script type="application/javascript" defer src="_search/ru/1773303603909-resources.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-0ca3ecbd78ee745e.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-5320a31c05d20641.js"></script>
+        <script type="application/javascript" defer src="_assets/b24loc.js?20240925-02"></script>
+        <script type="application/javascript" defer src="_assets/b24addons.js?20241208-01"></script>
+        
+    </body>
+</html>

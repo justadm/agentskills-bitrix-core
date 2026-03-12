@@ -1,0 +1,388 @@
+{
+  "version": "1.0",
+  "section": "ai",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__ai-engine-list.html",
+      "type": "method",
+      "title": "Получить список сервисов ai.engine.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/ai-engine-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__ai-engine-list.html.md",
+      "meta": {
+        "scope": [
+          "ai_admin"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-comment\">// callListMethod: Получает все данные сразу. Используйте только для небольших выборок (< 1000 элементов) из-за высокой нагрузки на память.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callListMethod</span>(\n    <span class=\"hljs-string\">'ai.engine.list'</span>,\n    {},\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">progress</span>) =></span> { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Progress:'</span>, progress) }\n  )\n  <span class=\"hljs-keyword\">const</span> items = response.<span class=\"hljs-title function_\">getData</span>() || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> items) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// fetchListMethod: Выбирает данные по частям с помощью итератора. Используйте для больших объемов данных для эффективного потребления памяти.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> generator = $b24.<span class=\"hljs-title function_\">fetchListMethod</span>(<span class=\"hljs-string\">'ai.engine.list'</span>, {}, <span class=\"hljs-string\">'ID'</span>)\n  <span class=\"hljs-keyword\">for</span> <span class=\"hljs-title function_\">await</span> (<span class=\"hljs-keyword\">const</span> page <span class=\"hljs-keyword\">of</span> generator) {\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> page) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n  }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// callMethod: Ручное управление постраничной навигацией через параметр start. Используйте для точного контроля над пакетами запросов. Для больших данных менее эффективен, чем fetchListMethod.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'ai.engine.list'</span>, {}, <span class=\"hljs-number\">0</span>)\n  <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span> || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> result) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.list'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling AI engine list: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'ai.engine.list'</span>,\n    {\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-comment\">// callListMethod: Получает все данные сразу. Используйте только для небольших выборок (< 1000 элементов) из-за высокой нагрузки на память.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callListMethod</span>(\n    <span class=\"hljs-string\">'ai.engine.list'</span>,\n    {},\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">progress</span>) =></span> { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Progress:'</span>, progress) }\n  )\n  <span class=\"hljs-keyword\">const</span> items = response.<span class=\"hljs-title function_\">getData</span>() || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> items) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// fetchListMethod: Выбирает данные по частям с помощью итератора. Используйте для больших объемов данных для эффективного потребления памяти.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> generator = $b24.<span class=\"hljs-title function_\">fetchListMethod</span>(<span class=\"hljs-string\">'ai.engine.list'</span>, {}, <span class=\"hljs-string\">'ID'</span>)\n  <span class=\"hljs-keyword\">for</span> <span class=\"hljs-title function_\">await</span> (<span class=\"hljs-keyword\">const</span> page <span class=\"hljs-keyword\">of</span> generator) {\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> page) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n  }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// callMethod: Ручное управление постраничной навигацией через параметр start. Используйте для точного контроля над пакетами запросов. Для больших данных менее эффективен, чем fetchListMethod.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'ai.engine.list'</span>, {}, <span class=\"hljs-number\">0</span>)\n  <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span> || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> result) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.list'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling AI engine list: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__ai-engine-register.html",
+      "type": "method",
+      "title": "Зарегистрировать сервис ai.engine.register",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/ai-engine-register.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__ai-engine-register.html.md",
+      "meta": {
+        "scope": [
+          "ai_admin"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.engine.register'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'Ivanov GPT'</span>,\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n\t\t\t<span class=\"hljs-attr\">category</span>: <span class=\"hljs-string\">'text'</span>,\n\t\t\t<span class=\"hljs-attr\">completions_url</span>: <span class=\"hljs-string\">'https://antonds.ru/ai/aul/completions/'</span>,\n\t\t\t<span class=\"hljs-attr\">settings</span>: {\n\t\t\t\t<span class=\"hljs-attr\">code_alias</span>: <span class=\"hljs-string\">'ChatGPT'</span>,\n\t\t\t\t<span class=\"hljs-attr\">model_context_type</span>: <span class=\"hljs-string\">'token'</span>,\n\t\t\t\t<span class=\"hljs-attr\">model_context_limit</span>: <span class=\"hljs-number\">16</span>*<span class=\"hljs-number\">1024</span>,\n\t\t\t},\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.register'</span>,\n            [\n                <span class=\"hljs-string\">'name'</span>            => <span class=\"hljs-string\">'Ivanov GPT'</span>,\n                <span class=\"hljs-string\">'code'</span>            => <span class=\"hljs-string\">'ivanov_gpt'</span>,\n                <span class=\"hljs-string\">'category'</span>        => <span class=\"hljs-string\">'text'</span>,\n                <span class=\"hljs-string\">'completions_url'</span> => <span class=\"hljs-string\">'https://antonds.ru/ai/aul/completions/'</span>,\n                <span class=\"hljs-string\">'settings'</span>        => [\n                    <span class=\"hljs-string\">'code_alias'</span>          => <span class=\"hljs-string\">'ChatGPT'</span>,\n                    <span class=\"hljs-string\">'model_context_type'</span>  => <span class=\"hljs-string\">'token'</span>,\n                    <span class=\"hljs-string\">'model_context_limit'</span> => <span class=\"hljs-number\">16</span> * <span class=\"hljs-number\">1024</span>,\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error registering AI engine: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'ai.engine.register'</span>,\n    {\n        <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'Ivanov GPT'</span>,\n        <span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n        <span class=\"hljs-attr\">category</span>: <span class=\"hljs-string\">'text'</span>,\n        <span class=\"hljs-attr\">completions_url</span>: <span class=\"hljs-string\">'https://antonds.ru/ai/aul/completions/'</span>,\n        <span class=\"hljs-attr\">settings</span>: {\n            <span class=\"hljs-attr\">code_alias</span>: <span class=\"hljs-string\">'ChatGPT'</span>,\n            <span class=\"hljs-attr\">model_context_type</span>: <span class=\"hljs-string\">'token'</span>,\n            <span class=\"hljs-attr\">model_context_limit</span>: <span class=\"hljs-number\">16</span>*<span class=\"hljs-number\">1024</span>,\n        },\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.engine.register'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'Ivanov GPT'</span>,\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n\t\t\t<span class=\"hljs-attr\">category</span>: <span class=\"hljs-string\">'text'</span>,\n\t\t\t<span class=\"hljs-attr\">completions_url</span>: <span class=\"hljs-string\">'https://antonds.ru/ai/aul/completions/'</span>,\n\t\t\t<span class=\"hljs-attr\">settings</span>: {\n\t\t\t\t<span class=\"hljs-attr\">code_alias</span>: <span class=\"hljs-string\">'ChatGPT'</span>,\n\t\t\t\t<span class=\"hljs-attr\">model_context_type</span>: <span class=\"hljs-string\">'token'</span>,\n\t\t\t\t<span class=\"hljs-attr\">model_context_limit</span>: <span class=\"hljs-number\">16</span>*<span class=\"hljs-number\">1024</span>,\n\t\t\t},\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.register'</span>,\n            [\n                <span class=\"hljs-string\">'name'</span>            => <span class=\"hljs-string\">'Ivanov GPT'</span>,\n                <span class=\"hljs-string\">'code'</span>            => <span class=\"hljs-string\">'ivanov_gpt'</span>,\n                <span class=\"hljs-string\">'category'</span>        => <span class=\"hljs-string\">'text'</span>,\n                <span class=\"hljs-string\">'completions_url'</span> => <span class=\"hljs-string\">'https://antonds.ru/ai/aul/completions/'</span>,\n                <span class=\"hljs-string\">'settings'</span>        => [\n                    <span class=\"hljs-string\">'code_alias'</span>          => <span class=\"hljs-string\">'ChatGPT'</span>,\n                    <span class=\"hljs-string\">'model_context_type'</span>  => <span class=\"hljs-string\">'token'</span>,\n                    <span class=\"hljs-string\">'model_context_limit'</span> => <span class=\"hljs-number\">16</span> * <span class=\"hljs-number\">1024</span>,\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error registering AI engine: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__ai-engine-unregister.html",
+      "type": "method",
+      "title": "Удалить сервис ai.engine.unregister",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/ai-engine-unregister.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__ai-engine-unregister.html.md",
+      "meta": {
+        "scope": [
+          "ai_admin"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.engine.unregister'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.unregister'</span>,\n            [\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'ivanov_gpt'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error unregistering AI engine: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'ai.engine.unregister'</span>,\n    {\n        <span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.engine.unregister'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'ivanov_gpt'</span>,\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.engine.unregister'</span>,\n            [\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'ivanov_gpt'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error unregistering AI engine: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__index.html",
+      "type": "guide",
+      "title": "AI в Битрикс24",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__prompts__ai-prompt-register.html",
+      "type": "method",
+      "title": "Добавить промпт ai.prompt.register",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/prompts/ai-prompt-register.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__prompts__ai-prompt-register.html.md",
+      "meta": {
+        "scope": [
+          "ai_admin"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.prompt.register'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">category</span>: [\n\t\t\t\t<span class=\"hljs-string\">\"livefeed\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"livefeed_comments\"</span>\n\t\t\t],\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke'</span>,\n\t\t\t<span class=\"hljs-attr\">icon</span>: <span class=\"hljs-string\">'smile'</span>,\n\t\t\t<span class=\"hljs-attr\">prompt</span>: <span class=\"hljs-string\">'Расскажи анекдот'</span>,\n\t\t\t<span class=\"hljs-attr\">translate</span>: {\n\t\t\t\t<span class=\"hljs-string\">\"en\"</span>:<span class=\"hljs-string\">\"A joke\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"ru\"</span>:<span class=\"hljs-string\">\"Анекдот\"</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.prompt.register'</span>,\n            [\n                <span class=\"hljs-string\">'category'</span> => [\n                    <span class=\"hljs-string\">\"livefeed\"</span>,\n                    <span class=\"hljs-string\">\"livefeed_comments\"</span>\n                ],\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'rest_joke'</span>,\n                <span class=\"hljs-string\">'icon'</span> => <span class=\"hljs-string\">'smile'</span>,\n                <span class=\"hljs-string\">'prompt'</span> => <span class=\"hljs-string\">'Расскажи анекдот'</span>,\n                <span class=\"hljs-string\">'translate'</span> => [\n                    <span class=\"hljs-string\">\"en\"</span> => <span class=\"hljs-string\">\"A joke\"</span>,\n                    <span class=\"hljs-string\">\"ru\"</span> => <span class=\"hljs-string\">\"Анекдот\"</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error registering AI prompt: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'ai.prompt.register'</span>,\n    {\n        <span class=\"hljs-attr\">category</span>: [\n            <span class=\"hljs-string\">\"livefeed\"</span>,\n            <span class=\"hljs-string\">\"livefeed_comments\"</span>\n        ],\n        <span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke'</span>,\n        <span class=\"hljs-attr\">icon</span>: <span class=\"hljs-string\">'smile'</span>,\n        <span class=\"hljs-attr\">prompt</span>: <span class=\"hljs-string\">'Расскажи анекдот'</span>,\n        <span class=\"hljs-attr\">translate</span>: {\n            <span class=\"hljs-string\">\"en\"</span>:<span class=\"hljs-string\">\"A joke\"</span>,\n            <span class=\"hljs-string\">\"ru\"</span>:<span class=\"hljs-string\">\"Анекдот\"</span>\n        }\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.prompt.register'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">category</span>: [\n\t\t\t\t<span class=\"hljs-string\">\"livefeed\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"livefeed_comments\"</span>\n\t\t\t],\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke'</span>,\n\t\t\t<span class=\"hljs-attr\">icon</span>: <span class=\"hljs-string\">'smile'</span>,\n\t\t\t<span class=\"hljs-attr\">prompt</span>: <span class=\"hljs-string\">'Расскажи анекдот'</span>,\n\t\t\t<span class=\"hljs-attr\">translate</span>: {\n\t\t\t\t<span class=\"hljs-string\">\"en\"</span>:<span class=\"hljs-string\">\"A joke\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"ru\"</span>:<span class=\"hljs-string\">\"Анекдот\"</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.prompt.register'</span>,\n            [\n                <span class=\"hljs-string\">'category'</span> => [\n                    <span class=\"hljs-string\">\"livefeed\"</span>,\n                    <span class=\"hljs-string\">\"livefeed_comments\"</span>\n                ],\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'rest_joke'</span>,\n                <span class=\"hljs-string\">'icon'</span> => <span class=\"hljs-string\">'smile'</span>,\n                <span class=\"hljs-string\">'prompt'</span> => <span class=\"hljs-string\">'Расскажи анекдот'</span>,\n                <span class=\"hljs-string\">'translate'</span> => [\n                    <span class=\"hljs-string\">\"en\"</span> => <span class=\"hljs-string\">\"A joke\"</span>,\n                    <span class=\"hljs-string\">\"ru\"</span> => <span class=\"hljs-string\">\"Анекдот\"</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error registering AI prompt: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__prompts__ai-prompt-unregister.html",
+      "type": "method",
+      "title": "Удалить промпт ai.prompt.unregister",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/prompts/ai-prompt-unregister.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__prompts__ai-prompt-unregister.html.md",
+      "meta": {
+        "scope": [
+          "ai_admin"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.prompt.unregister'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke_wolf'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.prompt.unregister'</span>,\n            [\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'rest_joke_wolf'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error unregistering AI prompt: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'ai.prompt.unregister'</span>,\n    {\n        <span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke_wolf'</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'ai.prompt.unregister'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">code</span>: <span class=\"hljs-string\">'rest_joke_wolf'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'ai.prompt.unregister'</span>,\n            [\n                <span class=\"hljs-string\">'code'</span> => <span class=\"hljs-string\">'rest_joke_wolf'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error unregistering AI prompt: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__prompts__conditions.html",
+      "type": "guide",
+      "title": "Условия в промптах",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/prompts/conditions.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__prompts__conditions.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "@<span class=\"hljs-keyword\">if</span> (engine.<span class=\"hljs-property\">code</span> = <span class=\"hljs-title class_\">ChatGPT</span>)\n\tГовори от имени робота.\n@<span class=\"hljs-keyword\">else</span>\n\tГовори от имени человека.\n@endif",
+          "language": ""
+        },
+        {
+          "code": "@<span class=\"hljs-keyword\">if</span> (engine.<span class=\"hljs-property\">code</span> = <span class=\"hljs-title class_\">ChatGPT</span>)\n\tНе забывай, что ты <span class=\"hljs-title class_\">ChatGPT</span>\n@endif",
+          "language": ""
+        },
+        {
+          "code": "@<span class=\"hljs-keyword\">if</span> (author.<span class=\"hljs-property\">name</span> = <span class=\"hljs-literal\">null</span>)\n\tговори от имени анонимуса\n@endif",
+          "language": ""
+        },
+        {
+          "code": "@<span class=\"hljs-keyword\">if</span> (engine.<span class=\"hljs-property\">code</span> != <span class=\"hljs-title class_\">ChatGPT</span>)\n\t{context_messages}\n@endif",
+          "language": ""
+        },
+        {
+          "code": "@<span class=\"hljs-keyword\">if</span> (marker.<span class=\"hljs-property\">original_message</span> != <span class=\"hljs-literal\">null</span>)\n\tпохвали за {original_message}\n@<span class=\"hljs-keyword\">else</span>\n\tпохвали за {user_message}\n@endif",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__prompts__index.html",
+      "type": "guide",
+      "title": "О промптах для CoPilot",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/prompts/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__prompts__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__ai__prompts__markers.html",
+      "type": "guide",
+      "title": "Маркеры в промптах",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/ai/prompts/markers.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "ai"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__ai__prompts__markers.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "Продолжи текст: {original_message}",
+          "language": ""
+        },
+        {
+          "code": "Напиши историю про {user_message}",
+          "language": ""
+        },
+        {
+          "code": "Напиши историю про {user_message} в продолжение текста: {original_message}.",
+          "language": ""
+        },
+        {
+          "code": "Выдели главное на основе текста: {author_message}",
+          "language": ""
+        },
+        {
+          "code": "Сформируй результат задачи на основе ее описания и комментариев к ней: {context_messages}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

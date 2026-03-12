@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../../../" />
+        <title>CRM-поставщики: обзор методов | REST API Битрикс24 и приложения для Маркет</title>
+        <meta name="generator" content="Diplodoc Platform v5.9.1">
+        <meta http-equiv="Content-Security-Policy" content="worker-src 'self';">
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        
+        <script type="application/javascript" src="_extensions/feedback-control-extension.js"></script>
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-5c42c2d82fe19c6e.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-34c68624e23be7ce.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/b24_custom.css?20241023-01"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/highlight_custom.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;div class=\"yfm-note yfm-accent-info\" note-type=\"info\"&gt;&lt;div class=\"yfm-note-content\"&gt;&lt;p&gt;CRM-поставщики доступны с версии модуля Торговый каталог 23.0.0 и REST API 23.100.0.&lt;/p&gt;\n&lt;/div&gt;&lt;/div&gt;&lt;p&gt;Поставщики — это физические и юридические лица, которые поставляют товары. В CRM их добавляют как контакты и компании, но они не участвуют в сделках, лидах, предложениях. Данные CRM-поставщиков указывают только в документах прихода. К одному документу можно прикрепить несколько контактов и одну компанию.&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Быстрый переход: &lt;a href=\"api-reference/catalog/documentcontractor/index.html#all-methods\"&gt;все методы&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Пользовательская документация: &lt;a href=\"https://helpdesk.bitrix24.ru/open/16734758\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Поставщики в Складском учете&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\"svyaz-postavshikov-s-drugimi-obuektami\"&gt;&lt;a href=\"api-reference/catalog/documentcontractor/index.html#svyaz-postavshikov-s-drugimi-obuektami\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Связь поставщиков с другими объектами&lt;/span&gt;&lt;/a&gt;Связь поставщиков с другими объектами&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Складской учет.&lt;/strong&gt; Поставщиков указывают в документах прихода. Для работы с документами используйте методы &lt;a href=\"api-reference/catalog/document/index.html\"&gt;catalog.document.*&lt;/a&gt;.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;CRM.&lt;/strong&gt; Поставщики — это объекты CRM. Для работы с ними используйте универсальные методы &lt;a href=\"api-reference/crm/universal/index.html\"&gt;crm.item.*&lt;/a&gt;.&lt;/p&gt;\n&lt;h2 id=\"all-methods\"&gt;&lt;a href=\"api-reference/catalog/documentcontractor/index.html#all-methods\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Обзор методов&lt;/span&gt;&lt;/a&gt;Обзор методов&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Scope: &lt;a href=\"api-reference/scopes/permissions.html\"&gt;&lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-osl24j3y\"&gt;catalog&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Кто может выполнять метод: любой пользователь&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;table&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Метод&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Описание&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/catalog/documentcontractor/catalog-documentcontractor-add.html\"&gt;catalog.documentcontractor.add&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Добавляет привязку поставщика к документу&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/catalog/documentcontractor/catalog-documentcontractor-delete.html\"&gt;catalog.documentcontractor.delete&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Удаляет привязку поставщика к документу по идентификатору привязки&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/catalog/documentcontractor/catalog-documentcontractor-get-fields.html\"&gt;catalog.documentcontractor.getFields&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Возвращает список привязок поставщиков к документам по фильтру&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/catalog/documentcontractor/catalog-documentcontractor-list.html\"&gt;catalog.documentcontractor.list&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Возвращает поля с привязками CRM-поставщиков к складским документам&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;div class=\"yfm inline_code_tooltip\" id=\"tooltip_inline_clipboard_dialog\" role=\"dialog\"&gt;Скопировано&lt;/div&gt;","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.9.1"}],"style":["_assets/style/b24_custom.css?20241023-01","_assets/style/highlight_custom.css"],"script":["_assets/b24loc.js?20240925-02","_assets/b24addons.js?20241208-01"]},"headings":[{"title":"Связь поставщиков с другими объектами","href":"api-reference/catalog/documentcontractor/index.html#svyaz-postavshikov-s-drugimi-obuektami","level":2},{"title":"Обзор методов","href":"api-reference/catalog/documentcontractor/index.html#all-methods","level":2}],"title":"CRM-поставщики: обзор методов"},"router":{"pathname":"api-reference/catalog/documentcontractor/index","depth":4,"base":"../../../"},"lang":"ru","langs":["ru"],"viewerInterface":{"toc":true,"search":true,"feedback":true},"search":{"enabled":true,"provider":"local","api":"_search/api.js","link":"_search/ru/index.html"}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript">
+            window.feedbackControlExtensionInit({"endpoint":"https://util.1c-bitrix.ru/rest-doc/feedback-control.php"})
+        </script>
+        <script type="application/javascript" defer src="_search/ru/1773303603909-resources.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-0ca3ecbd78ee745e.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-5320a31c05d20641.js"></script>
+        <script type="application/javascript" defer src="_assets/b24loc.js?20240925-02"></script>
+        <script type="application/javascript" defer src="_assets/b24addons.js?20241208-01"></script>
+        
+    </body>
+</html>

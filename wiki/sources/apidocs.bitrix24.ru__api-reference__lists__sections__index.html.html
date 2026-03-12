@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../../../" />
+        <title>Работа с разделами: обзор методов | REST API Битрикс24 и приложения для Маркет</title>
+        <meta name="generator" content="Diplodoc Platform v5.9.1">
+        <meta http-equiv="Content-Security-Policy" content="worker-src 'self';">
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        
+        <script type="application/javascript" src="_extensions/feedback-control-extension.js"></script>
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-5c42c2d82fe19c6e.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-34c68624e23be7ce.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/b24_custom.css?20241023-01"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/highlight_custom.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;Разделы помогают организовывать данные и упрощать навигацию внутри списков. Они группируют записи по категориям или уровням вложенности.&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Быстрый переход: &lt;a href=\"api-reference/lists/sections/index.html#all-methods\"&gt;все методы&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Пользовательская документация: &lt;a href=\"https://helpdesk.bitrix24.ru/open/25651148\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Как создать и настроить список в Битрикс24&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\"svyaz-s-drugimi-obuektami\"&gt;&lt;a href=\"api-reference/lists/sections/index.html#svyaz-s-drugimi-obuektami\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Связь с другими объектами&lt;/span&gt;&lt;/a&gt;Связь с другими объектами&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Универсальные списки.&lt;/strong&gt; Каждый раздел принадлежит определенному списку. Чтобы добавить раздел в список необходимо указать параметры &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-e70u4clv\"&gt;IBLOCK_TYPE_ID&lt;/code&gt;, &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-cueo8gwt\"&gt;IBLOCK_ID&lt;/code&gt; и &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-4bs2xmpp\"&gt;IBLOCK_CODE&lt;/code&gt;. Значения можно получить с помощью метода &lt;a href=\"api-reference/lists/lists/lists-get.html\"&gt;lists.get&lt;/a&gt;.&lt;/p&gt;\n&lt;div class=\"yfm-note yfm-accent-tip\" note-type=\"tip\"&gt;&lt;p class=\"yfm-note-title\"&gt;Пользовательская документация&lt;/p&gt;\n&lt;div class=\"yfm-note-content\"&gt;&lt;ul&gt;\n&lt;li&gt;&lt;a href=\"https://helpdesk.bitrix24.ru/open/5406079\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Настройки просмотра списка&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;/div&gt;&lt;h2 id=\"all-methods\"&gt;&lt;a href=\"api-reference/lists/sections/index.html#all-methods\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Обзор методов&lt;/span&gt;&lt;/a&gt;Обзор методов&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Scope: &lt;a href=\"api-reference/scopes/permissions.html\"&gt;&lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-hrx2u1ds\"&gt;lists&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Кто может выполнять метод: зависит от метода&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;table&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Метод&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Описание&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/lists/sections/lists-section-add.html\"&gt;lists.section.add&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Создает раздел списка&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/lists/sections/lists-section-update.html\"&gt;lists.section.update&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Обновляет раздел списка&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/lists/sections/lists-section-get.html\"&gt;lists.section.get&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Возвращает раздел или список разделов&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/lists/sections/lists-section-delete.html\"&gt;lists.section.delete&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Удаляет раздел списка&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;div class=\"yfm inline_code_tooltip\" id=\"tooltip_inline_clipboard_dialog\" role=\"dialog\"&gt;Скопировано&lt;/div&gt;","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.9.1"}],"style":["_assets/style/b24_custom.css?20241023-01","_assets/style/highlight_custom.css"],"script":["_assets/b24loc.js?20240925-02","_assets/b24addons.js?20241208-01"]},"headings":[{"title":"Связь с другими объектами","href":"api-reference/lists/sections/index.html#svyaz-s-drugimi-obuektami","level":2},{"title":"Обзор методов","href":"api-reference/lists/sections/index.html#all-methods","level":2}],"title":"Работа с разделами: обзор методов"},"router":{"pathname":"api-reference/lists/sections/index","depth":4,"base":"../../../"},"lang":"ru","langs":["ru"],"viewerInterface":{"toc":true,"search":true,"feedback":true},"search":{"enabled":true,"provider":"local","api":"_search/api.js","link":"_search/ru/index.html"}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript">
+            window.feedbackControlExtensionInit({"endpoint":"https://util.1c-bitrix.ru/rest-doc/feedback-control.php"})
+        </script>
+        <script type="application/javascript" defer src="_search/ru/1773303603909-resources.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-0ca3ecbd78ee745e.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-5320a31c05d20641.js"></script>
+        <script type="application/javascript" defer src="_assets/b24loc.js?20240925-02"></script>
+        <script type="application/javascript" defer src="_assets/b24addons.js?20241208-01"></script>
+        
+    </body>
+</html>

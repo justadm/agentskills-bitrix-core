@@ -1,0 +1,957 @@
+{
+  "version": "1.0",
+  "section": "entity",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__entity-add.html",
+      "type": "method",
+      "title": "Создать хранилище данных entity.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/entity-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__entity-add.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Dishes'</span>,\n\t\t\t<span class=\"hljs-string\">'ACCESS'</span>: {\n\t\t\t\t<span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n\t\t\t\t<span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Created element with ID:'</span>, result);\n\t<span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.add'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>,\n                <span class=\"hljs-string\">'NAME'</span>   => <span class=\"hljs-string\">'Dishes'</span>,\n                <span class=\"hljs-string\">'ACCESS'</span> => [\n                    <span class=\"hljs-string\">'U1'</span> => <span class=\"hljs-string\">'W'</span>,\n                    <span class=\"hljs-string\">'AU'</span> => <span class=\"hljs-string\">'R'</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.add'</span>,\n    {\n        <span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n        <span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Dishes'</span>,\n        <span class=\"hljs-string\">'ACCESS'</span>: {\n            <span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n            <span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Dishes'</span>,\n\t\t\t<span class=\"hljs-string\">'ACCESS'</span>: {\n\t\t\t\t<span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n\t\t\t\t<span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Created element with ID:'</span>, result);\n\t<span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.add'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>,\n                <span class=\"hljs-string\">'NAME'</span>   => <span class=\"hljs-string\">'Dishes'</span>,\n                <span class=\"hljs-string\">'ACCESS'</span> => [\n                    <span class=\"hljs-string\">'U1'</span> => <span class=\"hljs-string\">'W'</span>,\n                    <span class=\"hljs-string\">'AU'</span> => <span class=\"hljs-string\">'R'</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__entity-delete.html",
+      "type": "method",
+      "title": "Удалить хранилище entity.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/entity-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__entity-delete.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'test'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'test'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.delete'</span>,\n    {\n        <span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'test'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'test'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'test'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__entity-get.html",
+      "type": "method",
+      "title": "Получить параметры хранилища или список всех хранилищ entity.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/entity-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__entity-get.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'entity.get'</span>);\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.get'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling entity.get: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'entity.get'</span>);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.get.json?auth=59efe32d01c0e9dc5732e8dfa68a4baa",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.get'</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(<span class=\"hljs-string\">'Список созданных хранилищ:'</span>, result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__entity-rights.html",
+      "type": "method",
+      "title": "Получить или изменить права доступа entity.rights",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/entity-rights.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__entity-rights.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.rights'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.rights'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling entity rights: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.rights'</span>,\n    {\n        <span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.rights'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.rights'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling entity rights: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__entity-update.html",
+      "type": "method",
+      "title": "Изменить параметры хранилища entity.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/entity-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__entity-update.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n\t\t\t<span class=\"hljs-string\">'ACCESS'</span>: {\n\t\t\t\t<span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n\t\t\t\t<span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.update'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>,\n                <span class=\"hljs-string\">'ACCESS'</span> => [\n                    <span class=\"hljs-string\">'U1'</span> => <span class=\"hljs-string\">'W'</span>,\n                    <span class=\"hljs-string\">'AU'</span> => <span class=\"hljs-string\">'R'</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.update'</span>,\n    {\n        <span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n        <span class=\"hljs-string\">'ACCESS'</span>: {\n            <span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n            <span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ENTITY'</span>: <span class=\"hljs-string\">'dish'</span>,\n\t\t\t<span class=\"hljs-string\">'ACCESS'</span>: {\n\t\t\t\t<span class=\"hljs-attr\">U1</span>:<span class=\"hljs-string\">'W'</span>,\n\t\t\t\t<span class=\"hljs-attr\">AU</span>:<span class=\"hljs-string\">'R'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.update'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'dish'</span>,\n                <span class=\"hljs-string\">'ACCESS'</span> => [\n                    <span class=\"hljs-string\">'U1'</span> => <span class=\"hljs-string\">'W'</span>,\n                    <span class=\"hljs-string\">'AU'</span> => <span class=\"hljs-string\">'R'</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating entity: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__entities__index.html",
+      "type": "guide",
+      "title": "Методы работы с хранилищами",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/entities/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__entities__index.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__index.html",
+      "type": "guide",
+      "title": "Хранилище данных: обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__index.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__entity-item-add.html",
+      "type": "method",
+      "title": "Добавить элемент хранилища entity.item.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/entity-item-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__entity-item-add.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n\t\t\t<span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Hello, world!'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n\t\t\t\t<span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n\t\t\t\t<span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n\t\t\t\t<span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-comment\">// Необходимая вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.add'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span>          => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'DATE_ACTIVE_FROM'</span> => <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">DateTime</span>(),\n                <span class=\"hljs-string\">'DETAIL_PICTURE'</span>  => <span class=\"hljs-string\">''</span>,\n                <span class=\"hljs-string\">'NAME'</span>            => <span class=\"hljs-string\">'Hello, world!'</span>,\n                <span class=\"hljs-string\">'PROPERTY_VALUES'</span> => [\n                    <span class=\"hljs-string\">'test'</span>     => <span class=\"hljs-number\">11</span>,\n                    <span class=\"hljs-string\">'test1'</span>    => <span class=\"hljs-number\">22</span>,\n                    <span class=\"hljs-string\">'test_file'</span> => <span class=\"hljs-string\">''</span>\n                ],\n                <span class=\"hljs-string\">'SECTION'</span>         => <span class=\"hljs-number\">219</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding entity item: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.add'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n        <span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n        <span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Hello, world!'</span>,\n        <span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n            <span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n            <span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n            <span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n        },\n        <span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.add.json?DATE_ACTIVE_FROM=2013-06-26T11%3A54%3A30.421Z&DETAIL_PICTURE=&ENTITY=menu_new&NAME=Hello%2C%20world!&PROPERTY_VALUES%5Btest1%5D=22&PROPERTY_VALUES%5Btest%5D=11&PROPERTY_VALUES%5Btest_file%5D=&SECTION=219&auth=9affe382af74d9c5caa588e28096e872",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n\t\t\t<span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Hello, world!'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n\t\t\t\t<span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n\t\t\t\t<span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n\t\t\t\t<span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-comment\">// Необходимая вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__entity-item-delete.html",
+      "type": "method",
+      "title": "Удалить элемент хранилища entity.item.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/entity-item-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__entity-item-delete.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'ID'</span>     => <span class=\"hljs-number\">842</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting entity item: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.delete'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.delete.json?ENTITY=menu_new&ID=842&auth=340bf57f35ee95e0debf98399632999c",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__entity-item-get.html",
+      "type": "method",
+      "title": "Получить список элементов хранилища entity.item.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/entity-item-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__entity-item-get.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu'</span>,\n\t\t\t<span class=\"hljs-attr\">SORT</span>: {\n\t\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-string\">'ASC'</span>,\n\t\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-string\">'ASC'</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">FILTER</span>: {\n\t\t\t\t<span class=\"hljs-string\">'>=DATE_ACTIVE_FROM'</span>: dateStart,\n\t\t\t\t<span class=\"hljs-string\">'<DATE_ACTIVE_FROM'</span>: dateFinish\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-title function_\">buildData</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.get'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu'</span>,\n                <span class=\"hljs-string\">'SORT'</span> => [\n                    <span class=\"hljs-string\">'DATE_ACTIVE_FROM'</span> => <span class=\"hljs-string\">'ASC'</span>,\n                    <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-string\">'ASC'</span>\n                ],\n                <span class=\"hljs-string\">'FILTER'</span> => [\n                    <span class=\"hljs-string\">'>=DATE_ACTIVE_FROM'</span> => <span class=\"hljs-variable\">$dateStart</span>,\n                    <span class=\"hljs-string\">'<DATE_ACTIVE_FROM'</span> => <span class=\"hljs-variable\">$dateFinish</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-variable language_\">$this</span>-><span class=\"hljs-title function_ invoke__\">buildData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting entity items: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.get'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu'</span>,\n        <span class=\"hljs-attr\">SORT</span>: {\n            <span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-string\">'ASC'</span>,\n            <span class=\"hljs-attr\">ID</span>: <span class=\"hljs-string\">'ASC'</span>\n        },\n        <span class=\"hljs-attr\">FILTER</span>: {\n            <span class=\"hljs-string\">'>=DATE_ACTIVE_FROM'</span>: dateStart,\n            <span class=\"hljs-string\">'<DATE_ACTIVE_FROM'</span>: dateFinish\n        }\n    },\n    $.<span class=\"hljs-title function_\">proxy</span>(\n        <span class=\"hljs-variable language_\">this</span>.<span class=\"hljs-property\">buildData</span>,\n        <span class=\"hljs-variable language_\">this</span>\n    )\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.get.json?=&ENTITY=menu&FILTER%5B%3CDATE_ACTIVE_FROM%5D=2013-07-01T00%3A00%3A00.000Z&FILTER%5B%3E%3DDATE_ACTIVE_FROM%5D=2013-06-24T00%3A00%3A00.000Z&SORT%5BDATE_ACTIVE_FROM%5D=ASC&SORT%5BID%5D=ASC&auth=723867cdb1ada1de7870de8b0e558679",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu'</span>,\n\t\t\t<span class=\"hljs-attr\">SORT</span>: {\n\t\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-string\">'ASC'</span>,\n\t\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-string\">'ASC'</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">FILTER</span>: {\n\t\t\t\t<span class=\"hljs-string\">'1'</span>:{\n\t\t\t\t\t<span class=\"hljs-string\">'LOGIC'</span>:<span class=\"hljs-string\">'OR'</span>,\n\t\t\t\t\t<span class=\"hljs-string\">'PROPERTY_MYPROP1'</span>:<span class=\"hljs-string\">'value1'</span>,\n\t\t\t\t\t<span class=\"hljs-string\">'PROPERTY_MYPROP2'</span>:<span class=\"hljs-string\">'value2'</span>\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-comment\">// Необходимая вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__entity-item-update.html",
+      "type": "method",
+      "title": "Обновить элемент хранилища entity.item.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/entity-item-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__entity-item-update.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>,\n\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n\t\t\t<span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Goodbye Cruel World'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n\t\t\t\t<span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n\t\t\t\t<span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n\t\t\t\t<span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.update'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span>          => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'ID'</span>              => <span class=\"hljs-number\">842</span>,\n                <span class=\"hljs-string\">'DATE_ACTIVE_FROM'</span> => <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">DateTime</span>(),\n                <span class=\"hljs-string\">'DETAIL_PICTURE'</span>  => <span class=\"hljs-string\">''</span>,\n                <span class=\"hljs-string\">'NAME'</span>            => <span class=\"hljs-string\">'Goodbye Cruel World'</span>,\n                <span class=\"hljs-string\">'PROPERTY_VALUES'</span> => [\n                    <span class=\"hljs-string\">'test'</span>     => <span class=\"hljs-number\">11</span>,\n                    <span class=\"hljs-string\">'test1'</span>    => <span class=\"hljs-number\">22</span>,\n                    <span class=\"hljs-string\">'test_file'</span> => <span class=\"hljs-string\">''</span>\n                ],\n                <span class=\"hljs-string\">'SECTION'</span>         => <span class=\"hljs-number\">219</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating entity item: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.update'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>,\n        <span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n        <span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n        <span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Goodbye Cruel World'</span>,\n        <span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n            <span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n            <span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n            <span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n        },\n        <span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.update.json?DATE_ACTIVE_FROM=2013-06-26T12%3A03%3A31.653Z&DETAIL_PICTURE=&ENTITY=menu_new&ID=842&NAME=Goodbye%20Cruel%20World&PROPERTY_VALUES%5Btest1%5D=22&PROPERTY_VALUES%5Btest%5D=11&PROPERTY_VALUES%5Btest_file%5D=&SECTION=219&auth=9affe382af74d9c5caa588e28096e872",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">842</span>,\n\t\t\t<span class=\"hljs-attr\">DATE_ACTIVE_FROM</span>: <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">Date</span>(),\n\t\t\t<span class=\"hljs-attr\">DETAIL_PICTURE</span>: <span class=\"hljs-string\">''</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Goodbye Cruel World'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY_VALUES</span>: {\n\t\t\t\t<span class=\"hljs-attr\">test</span>: <span class=\"hljs-number\">11</span>,\n\t\t\t\t<span class=\"hljs-attr\">test1</span>: <span class=\"hljs-number\">22</span>,\n\t\t\t\t<span class=\"hljs-attr\">test_file</span>: <span class=\"hljs-string\">''</span>\n\t\t\t},\n\t\t\t<span class=\"hljs-attr\">SECTION</span>: <span class=\"hljs-number\">219</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n\t<span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__index.html",
+      "type": "guide",
+      "title": "Методы работы с элементами хранилища",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__index.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-add.html",
+      "type": "method",
+      "title": "Добавить дополнительное свойство элементов хранилища entity.item.property.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/properties/entity-item-property-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-add.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Новое свойство'</span>,\n\t\t\t<span class=\"hljs-attr\">TYPE</span>: <span class=\"hljs-string\">'S'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Created element with ID:'</span>, result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.property.add'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span>   => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'PROPERTY'</span> => <span class=\"hljs-string\">'new_prop'</span>,\n                <span class=\"hljs-string\">'NAME'</span>     => <span class=\"hljs-string\">'Новое свойство'</span>,\n                <span class=\"hljs-string\">'TYPE'</span>     => <span class=\"hljs-string\">'S'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding entity item property: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.property.add'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n        <span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Новое свойство'</span>,\n        <span class=\"hljs-attr\">TYPE</span>: <span class=\"hljs-string\">'S'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.property.add.json?ENTITY=menu_new&NAME=%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE&PROPERTY=new_prop&TYPE=S&auth=e690b44d2b3827d2eb9d4dbe59406dbb",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Новое свойство'</span>,\n\t\t\t<span class=\"hljs-attr\">TYPE</span>: <span class=\"hljs-string\">'S'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Created element with ID:'</span>, result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-delete.html",
+      "type": "method",
+      "title": "Удалить дополнительное свойство элементов хранилища entity.item.property.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/properties/entity-item-property-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-delete.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.property.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span>   => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'PROPERTY'</span> => <span class=\"hljs-string\">'new_prop'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting entity item property: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.property.delete'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.property.delete.json?ENTITY=menu_new&PROPERTY=new_prop&auth=d92dd12b9b9b904254776104eed2bb76",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-get.html",
+      "type": "method",
+      "title": "Получить список дополнительных свойств элементов хранилища entity.item.property.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/properties/entity-item-property-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-get.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.property.get'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting entity item properties: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.property.get'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">r</span>){\n        <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(r.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.property.get.json?ENTITY=menu_new&auth=340bf57f35ee95e0debf98399632999c",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-update.html",
+      "type": "method",
+      "title": "Изменить дополнительное свойство элементов хранилища entity.item.property.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/properties/entity-item-property-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__properties__entity-item-property-update.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Уже не новое свойство'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.item.property.update'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span>   => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'PROPERTY'</span> => <span class=\"hljs-string\">'new_prop'</span>,\n                <span class=\"hljs-string\">'NAME'</span>     => <span class=\"hljs-string\">'Уже не новое свойство'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating entity item property: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.item.property.update'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n        <span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Уже не новое свойство'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.item.property.update.json?ENTITY=menu_new&NAME=%D0%A3%D0%B6%D0%B5%20%D0%BD%D0%B5%20%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE&PROPERTY=new_prop&auth=ad5a6f34f14f644136830eb8a936f07f",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.item.property.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">PROPERTY</span>: <span class=\"hljs-string\">'new_prop'</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Уже не новое свойство'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__items__properties__index.html",
+      "type": "guide",
+      "title": "Методы работы со свойствами элементов хранилища данных",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/items/properties/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__items__properties__index.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-add.html",
+      "type": "method",
+      "title": "Добавить раздел хранилища entity.section.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/sections/entity-section-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-add.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Тестовый раздел'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.section.add'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'NAME'</span>   => <span class=\"hljs-string\">'Тестовый раздел'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding entity section: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.section.add'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Тестовый раздел'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.section.add.json?ENTITY=menu_new&NAME=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB&auth=9affe382af74d9c5caa588e28096e872",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Тестовый раздел'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-delete.html",
+      "type": "method",
+      "title": "Удалить раздел хранилища entity.section.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/sections/entity-section-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-delete.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.section.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'ID'</span>     => <span class=\"hljs-number\">220</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting entity section: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.section.delete'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.section.delete.json?ENTITY=menu_new&ID=220&auth=9affe382af74d9c5caa588e28096e872",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.delete'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-get.html",
+      "type": "method",
+      "title": "Получить список разделов хранилища entity.section.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/sections/entity-section-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-get.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">SORT</span>: {\n\t\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'ASC'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> sections = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.section.get'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'SORT'</span>   => [\n                    <span class=\"hljs-string\">'NAME'</span> => <span class=\"hljs-string\">'ASC'</span>\n                ]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-variable\">$sections</span> = <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>();\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting entity sections: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.section.get'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">SORT</span>: {\n            <span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'ASC'</span>\n        }\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>){\n        sections = result.<span class=\"hljs-title function_\">data</span>();\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.section.get.json?ENTITY=menu_new&SORT%5BNAME%5D=ASC&auth=9affe382af74d9c5caa588e28096e872",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.get'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">SORT</span>: {\n\t\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'ASC'</span>\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> sections = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-update.html",
+      "type": "method",
+      "title": "Обновить раздел хранилища entity.section.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/sections/entity-section-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__sections__entity-section-update.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Не очень тестовый раздел'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'entity.section.update'</span>,\n            [\n                <span class=\"hljs-string\">'ENTITY'</span> => <span class=\"hljs-string\">'menu_new'</span>,\n                <span class=\"hljs-string\">'ID'</span>     => <span class=\"hljs-number\">220</span>,\n                <span class=\"hljs-string\">'NAME'</span>   => <span class=\"hljs-string\">'Не очень тестовый раздел'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating entity section: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'entity.section.update'</span>,\n    {\n        <span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n        <span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>,\n        <span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Не очень тестовый раздел'</span>\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/entity.section.update.json?auth=9affe382af74d9c5caa588e28096e872&ENTITY=menu_new&ID=220&NAME=%D0%9D%D0%B5%20%D0%BE%D1%87%D0%B5%D0%BD%D1%8C%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB",
+          "language": "HTTP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'entity.section.update'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">ENTITY</span>: <span class=\"hljs-string\">'menu_new'</span>,\n\t\t\t<span class=\"hljs-attr\">ID</span>: <span class=\"hljs-number\">220</span>,\n\t\t\t<span class=\"hljs-attr\">NAME</span>: <span class=\"hljs-string\">'Не очень тестовый раздел'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__entity__sections__index.html",
+      "type": "guide",
+      "title": "Методы работы с разделами хранилища",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/entity/sections/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "entity"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__entity__sections__index.html.md",
+      "meta": {
+        "scope": [
+          "entity"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    }
+  ]
+}

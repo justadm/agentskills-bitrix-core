@@ -1,0 +1,33 @@
+{
+  "sources": [
+    {
+      "name": "Bitrix24 MCP Docs Root",
+      "type": "url",
+      "urls": [
+        "https://mcp-dev.bitrix24.tech/mcp"
+      ]
+    },
+    {
+      "name": "Bitrix24 API Docs",
+      "type": "url",
+      "crawl_sections": ["*"],
+      "crawl_limit": 2000,
+      "urls": [
+        "https://apidocs.bitrix24.ru/"
+      ]
+    },
+    {
+      "name": "Bitrix24 Dev Hub (GitHub)",
+      "type": "git",
+      "repo_url": "https://github.com/bitrix-tools/bitrix24-dev-hub",
+      "path": "/Users/just/projects/AgentSkills/Bitrix/wiki/sources/repos/bitrix24-dev-hub",
+      "include": [
+        "README.md",
+        "docs/**/*.md"
+      ],
+      "urls": [
+        "https://github.com/bitrix-tools/bitrix24-dev-hub"
+      ]
+    }
+  ]
+}

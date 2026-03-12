@@ -1,0 +1,100 @@
+{
+  "version": "1.0",
+  "section": "scopes",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__scopes__confirmation.html",
+      "type": "guide",
+      "title": "Вызов методов с подтверждением",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/scopes/confirmation.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "scopes"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__scopes__confirmation.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable constant_\">GET</span> <span class=\"hljs-attr\">https</span>:<span class=\"hljs-comment\">//portal.bitrix24.ru/rest/voximplant.user.get?auth=fkp963yuv1ggkfbs5z3f5hy8lilm0iw6&USER_ID=1</span>\n<span class=\"hljs-variable constant_\">HTTP</span>/<span class=\"hljs-number\">1.1</span> <span class=\"hljs-number\">401</span> <span class=\"hljs-title class_\">Unauthorized</span>\n{\n    <span class=\"hljs-string\">\"error\"</span>: <span class=\"hljs-string\">\"METHOD_CONFIRM_WAITING\"</span>, \n    <span class=\"hljs-string\">\"error_description\"</span>: <span class=\"hljs-string\">\"Waiting for confirmation\"</span>\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-title function_\">array</span> (\n    <span class=\"hljs-string\">'event'</span> => <span class=\"hljs-string\">'ONAPPMETHODCONFIRM'</span>,\n    <span class=\"hljs-string\">'data'</span> => \n    <span class=\"hljs-title function_\">array</span> (\n        <span class=\"hljs-string\">'TOKEN'</span> => <span class=\"hljs-string\">'fkp963yuv1ggkfbs5z3f5hy8lilm0iw6'</span>,\n        <span class=\"hljs-string\">'METHOD'</span> => <span class=\"hljs-string\">'voximplant.user.get'</span>,\n        <span class=\"hljs-string\">'CONFIRMED'</span> => <span class=\"hljs-string\">'1'</span>,\n        <span class=\"hljs-string\">'LANGUAGE_ID'</span> => <span class=\"hljs-string\">'ru'</span>,\n        ),\n    <span class=\"hljs-string\">'ts'</span> => <span class=\"hljs-string\">'1478790852'</span>,\n    <span class=\"hljs-string\">'auth'</span> => \n    <span class=\"hljs-title function_\">array</span> (\n        <span class=\"hljs-string\">'domain'</span> => <span class=\"hljs-string\">'portal.bitrix24.ru'</span>,\n        <span class=\"hljs-string\">'client_endpoint'</span> => <span class=\"hljs-string\">'https://portal.bitrix24.ru/rest/'</span>,\n        <span class=\"hljs-string\">'server_andpoint'</span> => <span class=\"hljs-string\">'https://oauth.bitrix24.tech/rest/'</span>,\n        <span class=\"hljs-string\">'member_id'</span> => <span class=\"hljs-string\">'74ef8a46a75104de55d5d4a61b98ab6d'</span>,\n        <span class=\"hljs-string\">'application_token'</span> => <span class=\"hljs-string\">'c289487163b58658eae5e8b42eaf11b8'</span>,\n\t),",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-variable constant_\">GET</span> <span class=\"hljs-attr\">https</span>:<span class=\"hljs-comment\">//portal.bitrix24.ru/rest/voximplant.user.get?auth=fkp963yuv1ggkfbs5z3f5hy8lilm0iw6&USER_ID=1</span>\n<span class=\"hljs-variable constant_\">HTTP</span>/<span class=\"hljs-number\">1.1</span> <span class=\"hljs-number\">200</span> <span class=\"hljs-variable constant_\">OK</span>\n{\n    <span class=\"hljs-string\">\"result\"</span>: [\n        {\n            <span class=\"hljs-string\">\"DEFAULT_LINE\"</span>: <span class=\"hljs-literal\">null</span>, \n            <span class=\"hljs-string\">\"ID\"</span>: <span class=\"hljs-string\">\"1\"</span>, \n            <span class=\"hljs-string\">\"INNER_NUMBER\"</span>: <span class=\"hljs-literal\">null</span>, \n            <span class=\"hljs-string\">\"PHONE_ENABLED\"</span>: <span class=\"hljs-string\">\"Y\"</span>, \n            <span class=\"hljs-string\">\"SIP_LOGIN\"</span>: <span class=\"hljs-string\">\"****\"</span>, \n            <span class=\"hljs-string\">\"SIP_PASSWORD\"</span>: <span class=\"hljs-string\">\"*****\"</span>, \n            <span class=\"hljs-string\">\"SIP_SERVER\"</span>: <span class=\"hljs-string\">\"*****\"</span>\n        }\n    ]\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-variable constant_\">GET</span> <span class=\"hljs-attr\">https</span>:<span class=\"hljs-comment\">//portal.bitrix24.ru/rest/voximplant.user.get?auth=fkp963yuv1ggkfbs5z3f5hy8lilm0iw6&USER_ID=1</span>\n<span class=\"hljs-variable constant_\">HTTP</span>/<span class=\"hljs-number\">1.1</span> <span class=\"hljs-number\">403</span> <span class=\"hljs-title class_\">Forbidden</span>\n{\n    <span class=\"hljs-string\">\"error\"</span>: <span class=\"hljs-string\">\"METHOD_CONFIRM_DENIED\"</span>, \n    <span class=\"hljs-string\">\"error_description\"</span>: <span class=\"hljs-string\">\"Method call denied\"</span>\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__scopes__index.html",
+      "type": "guide",
+      "title": "Права на методы",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/scopes/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "scopes"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__scopes__index.html.md",
+      "meta": {
+        "scope": [
+          "CRM"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__scopes__permissions.html",
+      "type": "guide",
+      "title": "Доступные скоупы Битрикс24",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/scopes/permissions.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "scopes"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__scopes__permissions.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    }
+  ]
+}

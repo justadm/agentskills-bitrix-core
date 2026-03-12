@@ -1,0 +1,1472 @@
+{
+  "version": "1.0",
+  "section": "events",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-bind.html",
+      "type": "method",
+      "title": "Зарегистрировать новый обработчик события event.bind",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-bind.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-bind.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "event*",
+          "type": "string",
+          "description": "Имя события"
+        },
+        {
+          "name": "handler*",
+          "type": "string",
+          "description": "Ссылка на обработчик события"
+        },
+        {
+          "name": "auth_type",
+          "type": "integer",
+          "description": "Идентификатор пользователя, под которым авторизуется обработчик события. По умолчанию будет использоваться авторизация пользователя, действия которого привели к срабатыванию события"
+        },
+        {
+          "name": "event_type",
+          "type": "string",
+          "description": "Значения: online\\|offline. По умолчанию event_type=online, и поведение метода не меняется. Если вызывается event_type=offline, то метод работает с офлайн-событиями"
+        },
+        {
+          "name": "auth_connector",
+          "type": "string",
+          "description": "Ключ источника. Параметр предназначен для офлайн-событий. Позволяет исключать ложные срабатывания событий"
+        },
+        {
+          "name": "options",
+          "type": "string",
+          "description": "Дополнительные настройки для регистрируемого события, при наличии"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Успешность выполнения"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"event\": \"ONCRMLEADADD\",\n    \"handler\": \"https://www.my-domain.ru/handler/\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.bind",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callBind</span>(\n    <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n    <span class=\"hljs-string\">'https://www.my-domain.ru/handler/'</span>,\n    <span class=\"hljs-number\">15</span>,\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =></span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result)\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.bind'</span>,\n    [\n        <span class=\"hljs-string\">'event'</span> => <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n        <span class=\"hljs-string\">'handler'</span> => <span class=\"hljs-string\">'https://www.my-domain.ru/handler/'</span>,\n        <span class=\"hljs-string\">'auth_type'</span> => <span class=\"hljs-number\">15</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"event\": \"ONCRMLEADADD\",\n    \"handler\": \"https://www.my-domain.ru/handler/\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.bind",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callBind</span>(\n    <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n    <span class=\"hljs-string\">'https://www.my-domain.ru/handler/'</span>,\n    <span class=\"hljs-number\">15</span>,\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =></span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result)\n);",
+          "language": ""
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-get.html",
+      "type": "method",
+      "title": "Получить список зарегистрированных обработчиков событий event.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-get.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой элемент ответа"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/event.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'event.get'</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$eventService</span> = <span class=\"hljs-variable\">$serviceBuilder</span>-><span class=\"hljs-title function_ invoke__\">getMainScope</span>()-><span class=\"hljs-title function_ invoke__\">event</span>();\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$eventService</span>-><span class=\"hljs-title function_ invoke__\">get</span>();\n    <span class=\"hljs-variable\">$eventHandlers</span> = <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">getEventHandlers</span>();\n    <span class=\"hljs-keyword\">foreach</span> (<span class=\"hljs-variable\">$eventHandlers</span> <span class=\"hljs-keyword\">as</span> <span class=\"hljs-variable\">$handler</span>) {\n        <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Event: \"</span> . <span class=\"hljs-variable\">$handler</span>->event . <span class=\"hljs-string\">\"\\n\"</span>);\n        <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Handler: \"</span> . <span class=\"hljs-variable\">$handler</span>->handler . <span class=\"hljs-string\">\"\\n\"</span>);\n        <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Auth Type: \"</span> . <span class=\"hljs-variable\">$handler</span>->auth_type . <span class=\"hljs-string\">\"\\n\"</span>);\n        <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Offline: \"</span> . <span class=\"hljs-variable\">$handler</span>->offline . <span class=\"hljs-string\">\"\\n\"</span>);\n    }\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Error: \"</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"event.get\"</span>,\n    {},\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.get'</span>,\n    []\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP CRest"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-offline-clear.html",
+      "type": "method",
+      "title": "Очистить записи в очереди офлайн-событий event.offline.clear",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-offline-clear.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-offline-clear.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "process_id*",
+          "type": "string",
+          "description": "Идентификатор процесса, который занимается обработкой записей"
+        },
+        {
+          "name": "id",
+          "type": "array",
+          "description": "Массив идентификаторов записей, которые нужно вычистить. По умолчанию будут вычищены все записи, помеченные переданным process_id"
+        },
+        {
+          "name": "message_id",
+          "type": "array",
+          "description": "Массив значений поля MESSAGE_ID записей, которые нужно вычистить. Игнорируется, если указан параметр id. По умолчанию будут вычищены все записи, помеченные переданным process_id"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Успешность выполнения"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"process_id\": \"yh3gu929sf0d32lsfysqas2y1hlpp09q\",\n    \"id\": [2],\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.offline.clear",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'event.offline.clear'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'process_id'</span>: <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n\t\t\t<span class=\"hljs-string\">'id'</span>: [<span class=\"hljs-number\">2</span>]\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n\t{\n\t\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n\t}\n\t<span class=\"hljs-keyword\">else</span>\n\t{\n\t\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result);\n\t}\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'event.offline.clear'</span>,\n            [\n                <span class=\"hljs-string\">'process_id'</span> => <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n                <span class=\"hljs-string\">'id'</span>        => [<span class=\"hljs-number\">2</span>],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Data: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error clearing offline event: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"event.offline.clear\"</span>,\n    {\n        <span class=\"hljs-string\">\"process_id\"</span>: <span class=\"hljs-string\">\"yh3gu929sf0d32lsfysqas2y1hlpp09q\"</span>,\n        <span class=\"hljs-string\">\"id\"</span>: [<span class=\"hljs-number\">2</span>]\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.offline.clear'</span>,\n    [\n        <span class=\"hljs-string\">'process_id'</span> => <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n        <span class=\"hljs-string\">'id'</span> => [<span class=\"hljs-number\">2</span>]\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP CRest"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-offline-error.html",
+      "type": "method",
+      "title": "Зарегистрировать ошибки обработки очереди офлайн-событий event.offline.error",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-offline-error.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-offline-error.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "process_id*",
+          "type": "string",
+          "description": "Идентификатор процесса, который занимается обработкой записей"
+        },
+        {
+          "name": "message_id",
+          "type": "array",
+          "description": "Массив значений поля MESSAGE_ID записей, которые нужно пометить как ошибочные"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Успешность выполнения"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"process_id\": \"yh3gu929sf0d32lsfysqas2y1hlpp09q\",\n    \"message_id\": [2],\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.offline.error",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'event.offline.error'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'process_id'</span>: <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n\t\t\t<span class=\"hljs-string\">'message_id'</span>: [<span class=\"hljs-number\">2</span>]\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n\t{\n\t\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n\t}\n\t<span class=\"hljs-keyword\">else</span>\n\t{\n\t\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result);\n\t}\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'event.offline.error'</span>,\n            [\n                <span class=\"hljs-string\">'process_id'</span> => <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n                <span class=\"hljs-string\">'message_id'</span> => [<span class=\"hljs-number\">2</span>],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Data: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error handling offline event: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"event.offline.error\"</span>,\n    {\n        <span class=\"hljs-string\">\"process_id\"</span>: <span class=\"hljs-string\">\"yh3gu929sf0d32lsfysqas2y1hlpp09q\"</span>,\n        <span class=\"hljs-string\">\"message_id\"</span>: [<span class=\"hljs-number\">2</span>]\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.offline.error'</span>,\n    [\n        <span class=\"hljs-string\">'process_id'</span> => <span class=\"hljs-string\">'yh3gu929sf0d32lsfysqas2y1hlpp09q'</span>,\n        <span class=\"hljs-string\">'message_id'</span> => [<span class=\"hljs-number\">2</span>]\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP CRest"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-offline-get.html",
+      "type": "method",
+      "title": "Получить список офлайн-событий с «очисткой» event.offline.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-offline-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-offline-get.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "filter",
+          "type": "array",
+          "description": "Фильтр записей.  По умолчанию отдаются все записи, без фильтрации. Поддерживается фильтрация по полям: ID, TIMESTAMP_X, EVENT_NAME, MESSAGE_ID со стандартными операциями типа =, >, <, <= и так далее.\nВажно: тип операции ставится перед именем поля фильтрации"
+        },
+        {
+          "name": "order",
+          "type": "array",
+          "description": "Сортировка записей. Поддерживается сортировка по тем же полям, что и в фильтре, на вход принимается массив вида [поле=>ASC\\|DESC]. По умолчанию — [TIMESTAMP_X:ASC]"
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Количество выбираемых записей. По умолчанию 50"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой элемент ответа"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\"filter\":{\"=MESSAGE_ID\":1,\"=EVENT_NAME\":\"ONCRMLEADADD\",\">=ID\":1},\"auth_connector\":\"BxTest\",\"auth\":\"**put_access_token_here**\"}' \\\nhttps://**put_your_bitrix24_address**/rest/event.offline.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n    <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n        <span class=\"hljs-string\">'event.offline.get'</span>,\n        {\n            <span class=\"hljs-attr\">filter</span>: {\n                <span class=\"hljs-string\">'=MESSAGE_ID'</span>: <span class=\"hljs-number\">1</span>,\n                <span class=\"hljs-string\">'=EVENT_NAME'</span>: <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n                <span class=\"hljs-string\">'>=ID'</span>: <span class=\"hljs-number\">1</span>\n            },\n            <span class=\"hljs-attr\">auth_connector</span>: <span class=\"hljs-string\">'BxTest'</span>\n        }\n    );\n    \n    <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Result:'</span>, result);\n    <span class=\"hljs-title function_\">processResult</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'event.offline.get'</span>,\n            [\n                <span class=\"hljs-string\">'filter'</span> => [\n                    <span class=\"hljs-string\">'=MESSAGE_ID'</span> => <span class=\"hljs-number\">1</span>,\n                    <span class=\"hljs-string\">'=EVENT_NAME'</span> => <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n                    <span class=\"hljs-string\">'>=ID'</span> => <span class=\"hljs-number\">1</span>\n                ],\n                <span class=\"hljs-string\">'auth_connector'</span> => <span class=\"hljs-string\">'BxTest'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"event.offline.get\"</span>,\n    {\n        <span class=\"hljs-string\">\"filter\"</span>: {\n            <span class=\"hljs-string\">\"=MESSAGE_ID\"</span>: <span class=\"hljs-number\">1</span>,\n            <span class=\"hljs-string\">\"=EVENT_NAME\"</span>: <span class=\"hljs-string\">\"ONCRMLEADADD\"</span>,\n            <span class=\"hljs-string\">\">=ID\"</span>: <span class=\"hljs-number\">1</span>\n        }\n        <span class=\"hljs-string\">\"auth_connector\"</span>: <span class=\"hljs-string\">\"BxTest\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.offline.get'</span>,\n    [\n        <span class=\"hljs-string\">'filter'</span> => [\n            <span class=\"hljs-string\">'=MESSAGE_ID'</span> => <span class=\"hljs-number\">1</span>,\n            <span class=\"hljs-string\">'=EVENT_NAME'</span> => <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n            <span class=\"hljs-string\">'>=ID'</span> => <span class=\"hljs-number\">1</span>\n        ],\n        <span class=\"hljs-string\">'auth_connector'</span> => <span class=\"hljs-string\">'BxTest'</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP CRest"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-offline-list.html",
+      "type": "method",
+      "title": "Получить список офлайн-событий event.offline.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-offline-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-offline-list.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "filter",
+          "type": "array",
+          "description": "Фильтр записей. По умолчанию отдаются все записи, без фильтрации. Поддерживается фильтрация по полям: ID, TIMESTAMP_X, EVENT_NAME, MESSAGE_ID. PROCESS_ID, ERROR со стандартными операциями типа =, >, <, <= и так далее"
+        },
+        {
+          "name": "order",
+          "type": "array",
+          "description": "Сортировка записей. Поддерживается сортировка по тем же полям, что и в фильтре, на вход принимается массив вида [поле=>ASC\\|DESC]. По умолчанию — [ID:ASC]"
+        },
+        {
+          "name": "start",
+          "type": "integer",
+          "description": "Параметр используется для управления постраничной навигацией.\nРазмер страницы результатов всегда статичный: 50 записей.\nЧтобы выбрать вторую страницу результатов, необходимо передавать значение 50. Чтобы выбрать третью страницу результатов — значение 100 и так далее.\nФормула расчета значения параметра start:\nstart = (N-1) * 50, где N — номер нужной страницы"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой элемент ответа"
+        },
+        {
+          "name": "total",
+          "type": "integer",
+          "description": "Общее количество найденных записей"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"filter\": {\n        \"ERROR\": 0\n    },\n    \"order\": {\n        \"ID\": \"DESC\"\n    },\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.offline.list",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-comment\">// callListMethod: Получает все данные сразу. Используйте только для небольших выборок (< 1000 элементов) из-за высокой нагрузки на память.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callListMethod</span>(\n    <span class=\"hljs-string\">'event.offline.list'</span>,\n    {\n      <span class=\"hljs-string\">\"filter\"</span>: {\n        <span class=\"hljs-string\">\"ERROR\"</span>: <span class=\"hljs-number\">0</span>\n      },\n      <span class=\"hljs-string\">\"order\"</span>: {\n        <span class=\"hljs-string\">\"ID\"</span>: <span class=\"hljs-string\">\"DESC\"</span>\n      }\n    },\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">progress</span>) =></span> { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Progress:'</span>, progress) }\n  )\n  <span class=\"hljs-keyword\">const</span> items = response.<span class=\"hljs-title function_\">getData</span>() || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> items) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// fetchListMethod: Выбирает данные по частям с помощью итератора. Используйте для больших объемов данных для эффективного потребления памяти.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> generator = $b24.<span class=\"hljs-title function_\">fetchListMethod</span>(<span class=\"hljs-string\">'event.offline.list'</span>, { <span class=\"hljs-string\">\"filter\"</span>: { <span class=\"hljs-string\">\"ERROR\"</span>: <span class=\"hljs-number\">0</span> }, <span class=\"hljs-string\">\"order\"</span>: { <span class=\"hljs-string\">\"ID\"</span>: <span class=\"hljs-string\">\"DESC\"</span> } }, <span class=\"hljs-string\">'ID'</span>)\n  <span class=\"hljs-keyword\">for</span> <span class=\"hljs-title function_\">await</span> (<span class=\"hljs-keyword\">const</span> page <span class=\"hljs-keyword\">of</span> generator) {\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> page) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n  }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}\n\n<span class=\"hljs-comment\">// callMethod: Ручное управление постраничной навигацией через параметр start. Используйте для точного контроля над пакетами запросов. Для больших данных менее эффективен, чем fetchListMethod.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'event.offline.list'</span>, { <span class=\"hljs-string\">\"filter\"</span>: { <span class=\"hljs-string\">\"ERROR\"</span>: <span class=\"hljs-number\">0</span> }, <span class=\"hljs-string\">\"order\"</span>: { <span class=\"hljs-string\">\"ID\"</span>: <span class=\"hljs-string\">\"DESC\"</span> } }, <span class=\"hljs-number\">0</span>)\n  <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span> || []\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> result) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity) }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error)\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'event.offline.list'</span>,\n            [\n                <span class=\"hljs-string\">'filter'</span> => [\n                    <span class=\"hljs-string\">'ERROR'</span> => <span class=\"hljs-number\">0</span>,\n                ],\n                <span class=\"hljs-string\">'order'</span> => [\n                    <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-string\">'DESC'</span>,\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error fetching offline events: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"event.offline.list\"</span>,\n    {\n        <span class=\"hljs-string\">\"filter\"</span>: {\n            <span class=\"hljs-string\">\"ERROR\"</span>: <span class=\"hljs-number\">0</span>\n        },\n        <span class=\"hljs-string\">\"order\"</span>: {\n            <span class=\"hljs-string\">\"ID\"</span>: <span class=\"hljs-string\">\"DESC\"</span>\n        }\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.offline.list'</span>,\n    [\n        <span class=\"hljs-string\">'filter'</span> => [\n            <span class=\"hljs-string\">'ERROR'</span> => <span class=\"hljs-number\">0</span>\n        ],\n        <span class=\"hljs-string\">'order'</span> => [\n            <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-string\">'DESC'</span>\n        ]\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP CRest"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__event-unbind.html",
+      "type": "method",
+      "title": "Отменить зарегистрированный обработчик события event.unbind",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/event-unbind.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__event-unbind.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "администратор"
+      },
+      "params": [
+        {
+          "name": "event*",
+          "type": "string",
+          "description": "Имя события"
+        },
+        {
+          "name": "handler*",
+          "type": "string",
+          "description": "Ссылка на обработчик события"
+        },
+        {
+          "name": "auth_type",
+          "type": "integer",
+          "description": "Идентификатор пользователя, под которым авторизуется обработчик события.\nПримечание\nЕсли требуется удалить обработчики события, установленные с пустым auth_type (с авторизацией от имени пользователя, вызвавшего событие), но оставить остальные обработчики, указывайте auth_type=0 или пустое значение параметра."
+        },
+        {
+          "name": "event_type",
+          "type": "string",
+          "description": "Значения: online\\|offline. По умолчанию event_type=online, и поведение метода не меняется. Если вызывается event_type=offline, то метод работает с офлайн-событиями"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой элемент ответа"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"event\": \"ONCRMLEADADD\",\n    \"handler\": \"https://www.my-domain.ru/handler/\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.unbind\n    ```",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callUnbind</span>(\n    <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n    <span class=\"hljs-string\">'https://www.my-domain.ru/handler/'</span>,\n    <span class=\"hljs-number\">15</span>,\n    <span class=\"hljs-function\">(<span class=\"hljs-params\">result</span>) =></span> <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result)\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.unbind'</span>,\n    [\n        <span class=\"hljs-string\">'EVENT'</span> => <span class=\"hljs-string\">'ONCRMLEADADD'</span>,\n        <span class=\"hljs-string\">'HANDLER'</span> => <span class=\"hljs-string\">'https://www.my-domain.ru/handler/'</span>,\n        <span class=\"hljs-string\">'AUTH_TYPE'</span> => <span class=\"hljs-number\">15</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$eventCode</span> = <span class=\"hljs-string\">'your_event_code'</span>; <span class=\"hljs-comment\">// Replace with your actual event code</span>\n    <span class=\"hljs-variable\">$handlerUrl</span> = <span class=\"hljs-string\">'https://your.handler.url'</span>; <span class=\"hljs-comment\">// Replace with your actual handler URL</span>\n    <span class=\"hljs-variable\">$userId</span> = <span class=\"hljs-literal\">null</span>; <span class=\"hljs-comment\">// Replace with your actual user ID or leave as null</span>\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$serviceBuilder</span>\n        -><span class=\"hljs-title function_ invoke__\">getMainScope</span>()\n        -><span class=\"hljs-title function_ invoke__\">event</span>()\n        -><span class=\"hljs-title function_ invoke__\">unbind</span>(<span class=\"hljs-variable\">$eventCode</span>, <span class=\"hljs-variable\">$handlerUrl</span>, <span class=\"hljs-variable\">$userId</span>);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">getUnbindedHandlersCount</span>());\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n}",
+          "language": "PHP (B24PhpSdk)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"event\": \"ONCRMLEADADD\",\n    \"handler\": \"https://www.my-domain.ru/handler/\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/event.unbind\n    ```",
+          "language": ""
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__events.html",
+      "type": "guide",
+      "title": "Получить список доступных событий events",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/events.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__events.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "SCOPE",
+          "type": "string",
+          "description": "Метод вернет события, принадлежащие указанному разрешению"
+        },
+        {
+          "name": "FULL",
+          "type": "boolean",
+          "description": "Метод вернет весь список событий. Параметр будет проигнорирован, если будет передан параметр SCOPE"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой элемент ответа"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"SCOPE\": \"user\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/events",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"events\"</span>,\n    {\n        <span class=\"hljs-string\">\"SCOPE\"</span>: <span class=\"hljs-string\">\"user\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">dir</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'events'</span>,\n    [\n        <span class=\"hljs-string\">'SCOPE'</span> => <span class=\"hljs-string\">'user'</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"SCOPE\": \"user\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/events",
+          "language": ""
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"FULL\": true,\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/events",
+          "language": ""
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__index.html",
+      "type": "guide",
+      "title": "Обработчик событий",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">array</span>(\n    <span class=\"hljs-string\">'event'</span> => <span class=\"hljs-string\">'ONAPPINSTALL'</span>,\n    <span class=\"hljs-string\">'data'</span> => <span class=\"hljs-keyword\">array</span>(\n        <span class=\"hljs-string\">'VERSION'</span> => <span class=\"hljs-string\">'1'</span>,\n        <span class=\"hljs-string\">'LANGUAGE_ID'</span> => <span class=\"hljs-string\">'ru'</span>,\n    ),\n    <span class=\"hljs-string\">'ts'</span> => <span class=\"hljs-string\">'1466439714'</span>,\n    <span class=\"hljs-string\">'auth'</span> => <span class=\"hljs-keyword\">array</span>(\n        <span class=\"hljs-string\">'access_token'</span> => <span class=\"hljs-string\">'s6p6eclrvim6da22ft9ch94ekreb52lv'</span>,\n        <span class=\"hljs-string\">'expires_in'</span> => <span class=\"hljs-string\">'3600'</span>,\n        <span class=\"hljs-string\">'scope'</span> => <span class=\"hljs-string\">'entity,im'</span>,\n        <span class=\"hljs-string\">'domain'</span> => <span class=\"hljs-string\">'portal.bitrix24.com'</span>,\n        <span class=\"hljs-string\">'server_endpoint'</span> => <span class=\"hljs-string\">'https://oauth.bitrix24.tech/rest/'</span>,\n        <span class=\"hljs-string\">'status'</span> => <span class=\"hljs-string\">'F'</span>,\n        <span class=\"hljs-string\">'client_endpoint'</span> => <span class=\"hljs-string\">'https://portal.bitrix24.com/rest/'</span>,\n        <span class=\"hljs-string\">'member_id'</span> => <span class=\"hljs-string\">'a223c6b3710f85df22e9377d6c4f7553'</span>,\n        <span class=\"hljs-string\">'refresh_token'</span> => <span class=\"hljs-string\">'4s386p3q0tr8dy89xvmt96234v3dljg8'</span>,\n        <span class=\"hljs-string\">'application_token'</span> => <span class=\"hljs-string\">'51856fefc120afa4b628cc82d3935cce'</span>,\n    ),\n)",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONCRMDEALADD\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"event_handler_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"975\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"FIELDS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"7405\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1766047124\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"portal.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://portal.bitrix24.ru/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"d897063e1ce7c5eb9f04b9751eef5915\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"jvh9y1ulvt2m6k5or90v9mg8nn32ozas\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__offline-events.html",
+      "type": "guide",
+      "title": "Особенности, преимущества и недостатки офлайн-событий",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/offline-events.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__offline-events.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__on-offline-event.html",
+      "type": "guide",
+      "title": "Событие изменения очереди onOfflineEvent",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/on-offline-event.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__on-offline-event.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "{\n  \"event\": \"ONOFFLINEEVENT\",\n  \"data\": {\n    \"type\": \"add\",\n    \"event\": \"onTaskAdd\",\n    \"handler\": \"https://example.ru/handler.php\", \n    \"minTimeout\": 5\n  },\n  \"ts\": \"1466439714\",\n  \"auth\": {\n    \"access_token\": \"s6p6eclrvim6da22ft9ch94ekreb52lv\",\n    \"expires_in\": \"3600\",\n    \"scope\": \"task\",\n    \"domain\": \"some-domain.bitrix24.ru\",\n    \"server_endpoint\": \"https://oauth.bitrix24.tech/rest/\", \n    \"status\": \"F\",\n    \"client_endpoint\": \"https://some-domain.bitrix24.ru/rest/\", \n    \"member_id\": \"a223c6b3710f85df22e9377d6c4f7553\",\n    \"refresh_token\": \"4s386p3q0tr8dy89xvmt96234v3dljg8\",\n    \"application_token\": \"51856fefc120afa4b628cc82d3935cce\"\n  }\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__safe-event-handlers.html",
+      "type": "guide",
+      "title": "Безопасность в обработчиках",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/safe-event-handlers.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__safe-event-handlers.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__events__test-handler.html",
+      "type": "guide",
+      "title": "Как проверить свой обработчик для обработки событий Битрикс24",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/events/test-handler.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "events"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__events__test-handler.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-meta\"><?</span>\n<span class=\"hljs-title function_ invoke__\">file_put_contents</span>(\n    <span class=\"hljs-keyword\">__DIR__</span> . <span class=\"hljs-string\">'/log/'</span> . <span class=\"hljs-title function_ invoke__\">time</span>() . <span class=\"hljs-string\">'.txt'</span>,\n    <span class=\"hljs-title function_ invoke__\">var_export</span>(<span class=\"hljs-variable\">$_REQUEST</span>, <span class=\"hljs-literal\">true</span>)\n);",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"event\":\"ONAPPTEST\",\"handler\":\"https://example.com/handler.php\",\"auth\":\"**put_access_token_here**\"}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/event.bind",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'event.bind'</span>,\n    {\n        <span class=\"hljs-string\">'event'</span>: <span class=\"hljs-string\">'ONAPPTEST'</span>,\n        <span class=\"hljs-string\">'handler'</span>: <span class=\"hljs-string\">'https://example.com/handler.php'</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">eventBind</span>) {\n        <span class=\"hljs-keyword\">if</span> (eventBind.<span class=\"hljs-title function_\">data</span>()) {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'event bind successful'</span>);\n        }\n    }\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-meta\"><?</span>\n<span class=\"hljs-variable\">$eventBind</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'event.bind'</span>,\n    [\n        <span class=\"hljs-string\">'event'</span> => <span class=\"hljs-string\">'ONAPPTEST'</span>,\n        <span class=\"hljs-string\">'handler'</span> => <span class=\"hljs-string\">'https://example.com/handler.php'</span>\n    ]\n);\n<span class=\"hljs-keyword\">if</span>(<span class=\"hljs-variable\">$eventBind</span>[<span class=\"hljs-string\">'result'</span>])\n{\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'event bind successful'</span>;\n}\n<span class=\"hljs-meta\">?></span>",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"any\":\"data\",\"auth\":\"**put_access_token_here**\"}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/event.test",
+          "language": "cURL (OAuth)"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

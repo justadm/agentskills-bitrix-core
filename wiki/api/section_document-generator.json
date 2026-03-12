@@ -1,0 +1,1200 @@
+{
+  "version": "1.0",
+  "section": "document-generator",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-add.html",
+      "type": "method",
+      "title": "Создать новый документ на основании шаблона documentgenerator.document.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-add.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-delete.html",
+      "type": "method",
+      "title": "Удалить документ documentgenerator.document.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-delete.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-enable-public-url.html",
+      "type": "method",
+      "title": "Включить/выключить публичную ссылку на документ documentgenerator.document.enablepublicurl",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-enable-public-url.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-enable-public-url.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"publicUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span> <span class=\"hljs-comment\">// публичная ссылка</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-get-fields.html",
+      "type": "method",
+      "title": "Получить список полей документов documentgenerator.document.getfields",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-get-fields.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-get-fields.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-get.html",
+      "type": "method",
+      "title": "Получить документ по идентификатору documentgenerator.document.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-get.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"document\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1929</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// id документа</span>\n    <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template 1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// название</span>\n    <span class=\"hljs-attr\">\"number\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// номер</span>\n    <span class=\"hljs-attr\">\"createTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T16:04:40+02:00\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// дата создания</span>\n    <span class=\"hljs-attr\">\"updateTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T16:04:40+02:00\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// дата изменения</span>\n    <span class=\"hljs-attr\">\"createdBy\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид пользователя, кто создал документ</span>\n    <span class=\"hljs-attr\">\"updatedBy\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид пользователя, кто обновил документ</span>\n    <span class=\"hljs-attr\">\"stampsEnabled\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-literal\"><span class=\"hljs-keyword\">true</span></span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// вставлены ли печати и подписи</span>\n    <span class=\"hljs-attr\">\"downloadUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание docx файла пользователем</span>\n    <span class=\"hljs-attr\">\"downloadUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание docx файла приложением</span>\n    <span class=\"hljs-attr\">\"imageUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание картинки пользователем</span>\n    <span class=\"hljs-attr\">\"imageUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание картинки приложением</span>\n    <span class=\"hljs-attr\">\"pdfUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание pdf пользователем</span>\n    <span class=\"hljs-attr\">\"pdfUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание pdf приложением</span>\n    <span class=\"hljs-attr\">\"publicUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// публичная ссылка (если есть)</span>\n    <span class=\"hljs-attr\">\"isTransformationError\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-literal\"><span class=\"hljs-keyword\">false</span></span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// была ли ошибка конвертации</span>\n    <span class=\"hljs-attr\">\"templateId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид шаблона</span>\n    <span class=\"hljs-attr\">\"provider\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// код провайдера</span>\n    <span class=\"hljs-attr\">\"value\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// внешний идентификатор</span>\n    <span class=\"hljs-attr\">\"values\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// значения полей</span>\n        <span class=\"hljs-attr\">\"SomeDate\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-02-21T16:33:00+03:00\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-list.html",
+      "type": "method",
+      "title": "Получить список документов documentgenerator.document.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-list.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"filter\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"value\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">5</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-attr\">\"documents\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n    <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1929</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// id документа</span>\n        <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template 1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// название</span>\n        <span class=\"hljs-attr\">\"number\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// номер</span>\n        <span class=\"hljs-attr\">\"createTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T16:04:40+02:00\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// дата создания</span>\n        <span class=\"hljs-attr\">\"updateTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T16:04:40+02:00\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// дата изменения</span>\n        <span class=\"hljs-attr\">\"stampsEnabled\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-literal\"><span class=\"hljs-keyword\">true</span></span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// вставлены ли печати и подписи</span>\n        <span class=\"hljs-attr\">\"downloadUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание docx файла пользователем</span>\n        <span class=\"hljs-attr\">\"downloadUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание docx файла приложением</span>\n        <span class=\"hljs-attr\">\"imageUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание картинки пользователем</span>\n        <span class=\"hljs-attr\">\"imageUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание картинки приложением</span>\n        <span class=\"hljs-attr\">\"pdfUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание pdf пользователем</span>\n        <span class=\"hljs-attr\">\"pdfUrlMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание pdf приложением</span>\n        <span class=\"hljs-attr\">\"publicUrl\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// публичная ссылка (если есть)</span>\n        <span class=\"hljs-attr\">\"isTransformationError\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-literal\"><span class=\"hljs-keyword\">false</span></span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// была ли ошибка конвертации</span>\n        <span class=\"hljs-attr\">\"templateId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид шаблона</span>\n        <span class=\"hljs-attr\">\"provider\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// код провайдера</span>\n        <span class=\"hljs-attr\">\"value\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// внешний идентификатор</span>\n        <span class=\"hljs-attr\">\"values\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// значения полей</span>\n            <span class=\"hljs-attr\">\"SomeDate\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-02-21T16:33:00+03:00\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">]</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-update.html",
+      "type": "method",
+      "title": "Изменить существующий документ documentgenerator.document.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/document-generator-document-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__document-generator-document-update.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__examples__document-date-name.html",
+      "type": "guide",
+      "title": "Генерация документа с модификаторами даты и имени",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/examples/document-date-name.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__examples__document-date-name.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "[\n    <span class=\"hljs-string\">'NAME'</span> => <span class=\"hljs-string\">'Игорь'</span>, <span class=\"hljs-comment\">// имя</span>\n    <span class=\"hljs-string\">'LAST_NAME'</span> => <span class=\"hljs-string\">'Иванов'</span>, <span class=\"hljs-comment\">// фамилия</span>\n    <span class=\"hljs-string\">'SECOND_NAME'</span> => <span class=\"hljs-string\">'Петрович'</span>, <span class=\"hljs-comment\">// отчество</span>\n    <span class=\"hljs-string\">'GENDER'</span> => <span class=\"hljs-string\">'M'</span>, <span class=\"hljs-comment\">// пол</span>\n]",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n\t<span class=\"hljs-string\">'templateId'</span> => <span class=\"hljs-number\">203</span>,\n\t<span class=\"hljs-string\">'providerClassName'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>,\n\t<span class=\"hljs-string\">'value'</span> => <span class=\"hljs-number\">1</span>,\n\t<span class=\"hljs-string\">'values'</span> => [\n\t\t<span class=\"hljs-string\">'SomeDate'</span> => <span class=\"hljs-string\">'2018-10-10T14:30:18+02:00'</span>, <span class=\"hljs-comment\">// значение передано в формате atom</span>\n\t\t<span class=\"hljs-string\">'SomeName'</span> => [ <span class=\"hljs-comment\">// имя передано в виде массива</span>\n\t\t\t<span class=\"hljs-string\">'NAME'</span> => <span class=\"hljs-string\">'Владислав'</span>,\n\t\t\t<span class=\"hljs-string\">'LAST_NAME'</span> => <span class=\"hljs-string\">'Горелкин'</span>,\n\t\t\t<span class=\"hljs-string\">'GENDER'</span> => <span class=\"hljs-string\">'M'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'fields'</span> => [\n\t\t<span class=\"hljs-string\">'SomeDate'</span> => [\n\t\t\t<span class=\"hljs-string\">'TYPE'</span> => <span class=\"hljs-string\">'DATE'</span>,\n\t\t\t<span class=\"hljs-string\">'FORMAT'</span> => [\n\t\t\t\t<span class=\"hljs-string\">'format'</span> => <span class=\"hljs-string\">'d f Y H:i'</span>, <span class=\"hljs-comment\">// формат вывода</span>\n\t\t\t],\n\t\t], <span class=\"hljs-comment\">// тип поля - дата</span>\n\t\t<span class=\"hljs-string\">'SomeName'</span> => [\n\t\t\t<span class=\"hljs-string\">'TYPE'</span> => <span class=\"hljs-string\">'NAME'</span>,\n\t\t\t<span class=\"hljs-string\">'FORMAT'</span> => [ <span class=\"hljs-comment\">// здесь можно передать формат поля по умолчанию</span>\n\t\t\t\t<span class=\"hljs-string\">'case'</span> => <span class=\"hljs-number\">0</span>, <span class=\"hljs-comment\">// код падежа</span>\n\t\t\t\t<span class=\"hljs-string\">'format'</span> => <span class=\"hljs-string\">'#NAME# #LAST_NAME#'</span> <span class=\"hljs-comment\">// формат вывода</span>\n\t\t\t]\n\t\t], <span class=\"hljs-comment\">// тип поля - имя</span>\n\t]\n];\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.document.add/'</span>;",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__examples__document-images-seals.html",
+      "type": "guide",
+      "title": "Генерация документа с изображениями и печатями",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/examples/document-images-seals.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__examples__document-images-seals.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n    <span class=\"hljs-string\">'templateId'</span> => <span class=\"hljs-number\">203</span>,\n    <span class=\"hljs-string\">'providerClassName'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>,\n    <span class=\"hljs-string\">'value'</span> => <span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-string\">'values'</span> => [\n        <span class=\"hljs-string\">'SomeDate'</span> => <span class=\"hljs-string\">'14.02.2018'</span>,\n        <span class=\"hljs-string\">'SomeName'</span> => <span class=\"hljs-string\">'Горелкин Владислав'</span>,\n        <span class=\"hljs-string\">'Stamp'</span> => <span class=\"hljs-string\">'http://myrestapp.com/upload/stamp.png'</span>, <span class=\"hljs-comment\">// внешний путь к файлу печати</span>\n        <span class=\"hljs-string\">'Image'</span> => <span class=\"hljs-string\">'http://myrestapp.com/upload/image.jpg'</span>, <span class=\"hljs-comment\">// внешний путь к файлу изображения</span>\n    ],\n    <span class=\"hljs-string\">'fields'</span> => [\n        <span class=\"hljs-string\">'Stamp'</span> => [<span class=\"hljs-string\">'TYPE'</span> => <span class=\"hljs-string\">'STAMP'</span>], <span class=\"hljs-comment\">// тип поля - печать</span>\n        <span class=\"hljs-string\">'Image'</span> => [<span class=\"hljs-string\">'TYPE'</span> => <span class=\"hljs-string\">'IMAGE'</span>], <span class=\"hljs-comment\">// тип поля - изображение</span>\n    ]\n];\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.document.add/'</span>;",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__examples__document-table-complex.html",
+      "type": "guide",
+      "title": "Генерация документа со сложными таблицами",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/examples/document-table-complex.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__examples__document-table-complex.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-comment\">// Описание значений values</span>\n<span class=\"hljs-string\">'values'</span> => [\n\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Welcome to my template'</span>,\n\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'<b>Description is here</b>'</span>,\n\t<span class=\"hljs-string\">'Picture'</span> => <span class=\"hljs-literal\">null</span>, <span class=\"hljs-comment\">// you can put here link to an image</span>\n\t<span class=\"hljs-string\">'Events'</span> => [\n\t\t[\n\t\t\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Automation'</span>,\n\t\t\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'Some description of the automation event'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerName'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerName}'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerCompany'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerCompany}'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerPosition'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerPosition}'</span>,\n\t\t],\n\t\t[\n\t\t\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Documents'</span>,\n\t\t\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'This event is about document procession'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerName'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerName}'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerCompany'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerCompany}'</span>,\n\t\t\t<span class=\"hljs-string\">'SpeakerPosition'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerPosition}'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'EventsEventTitle'</span> => <span class=\"hljs-string\">'Events.Event.Title'</span>,\n\t<span class=\"hljs-string\">'EventsEventDescription'</span> => <span class=\"hljs-string\">'Events.Event.Description'</span>,\n\t<span class=\"hljs-string\">'EventsEventSpeakerName'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerName'</span>,\n\t<span class=\"hljs-string\">'EventsEventSpeakerCompany'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerCompany'</span>,\n\t<span class=\"hljs-string\">'EventsEventSpeakerPosition'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerPosition'</span>,\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Name'</span>,\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Company'</span>,\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Position'</span>,\n\t<span class=\"hljs-string\">'Event1Speakers'</span> => [\n\t\t[\n\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Ivan Petrov'</span>,\n\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Cool Ltd.'</span>,\n\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Core developer'</span>,\n\t\t],\n\t\t[\n\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Igor Milov'</span>,\n\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Cool Ltd.'</span>,\n\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Product Manager'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'Event2Speakers'</span> => [\n\t\t[\n\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Sergey Ivanov'</span>,\n\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Devils corp.'</span>,\n\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Chief'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Name'</span>,\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Company'</span>,\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Position'</span>,\n]",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-comment\">// Описание полей fields</span>\n<span class=\"hljs-string\">'fields'</span> => [\n\t<span class=\"hljs-string\">'Events'</span> => [\n\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Event'</span>,\n\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'Event1Speakers'</span> => [\n\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Speaker'</span>,\n\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'Event2Speakers'</span> => [\n\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Speaker'</span>,\n\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t],\n\t],\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span>],\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span>],\n\t<span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span>],\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span>],\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span>],\n\t<span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span>],",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-meta\"><?php</span>\n<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-variable\">$_SERVER</span>[<span class=\"hljs-string\">'DOCUMENT_ROOT'</span>].<span class=\"hljs-string\">'/rest_test/rest.php'</span>);\n<span class=\"hljs-variable\">$templateId</span> = <span class=\"hljs-number\">58</span>;\n<span class=\"hljs-variable\">$entityTypeId</span> = <span class=\"hljs-number\">2</span>;\n<span class=\"hljs-variable\">$entityid</span> = <span class=\"hljs-number\">28</span>;\n<span class=\"hljs-variable\">$action</span> = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">RestAction</span>(<span class=\"hljs-string\">'document'</span>, <span class=\"hljs-string\">'add'</span>);\n<span class=\"hljs-variable\">$action</span>-><span class=\"hljs-title function_ invoke__\">setPrefix</span>(<span class=\"hljs-string\">'crm.documentgenerator'</span>);\n<span class=\"hljs-variable\">$data</span> = [\n\t<span class=\"hljs-string\">'templateId'</span> => <span class=\"hljs-variable\">$templateId</span>,\n\t<span class=\"hljs-string\">'entityTypeId'</span> => <span class=\"hljs-variable\">$entityTypeId</span>,\n\t<span class=\"hljs-string\">'entityId'</span> => <span class=\"hljs-variable\">$entityid</span>, \n\t<span class=\"hljs-string\">'values'</span> => [\n\t\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Welcome to my template'</span>,\n\t\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'<b>Description is here</b>'</span>,\n\t\t<span class=\"hljs-string\">'Picture'</span> => <span class=\"hljs-literal\">null</span>, <span class=\"hljs-comment\">// you can put here link to an image</span>\n\t\t<span class=\"hljs-string\">'Events'</span> => [\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Automation'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'Some description of the automation event'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerName'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerName}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'BlockStart'</span> => <span class=\"hljs-string\">'{Event1Speakers.BLOCK_START}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'BlockEnd'</span> => <span class=\"hljs-string\">'{Event1Speakers.BLOCK_END}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerCompany'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerCompany}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerPosition'</span> => <span class=\"hljs-string\">'{Event1SpeakersSpeakerPosition}'</span>,\n\t\t\t],\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Title'</span> => <span class=\"hljs-string\">'Documents'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Description'</span> => <span class=\"hljs-string\">'This event is about document procession'</span>,\n\t\t\t\t<span class=\"hljs-string\">'BlockStart'</span> => <span class=\"hljs-string\">'{Event2Speakers.BLOCK_START}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'BlockEnd'</span> => <span class=\"hljs-string\">'{Event2Speakers.BLOCK_END}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerName'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerName}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerCompany'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerCompany}'</span>,\n\t\t\t\t<span class=\"hljs-string\">'SpeakerPosition'</span> => <span class=\"hljs-string\">'{Event2SpeakersSpeakerPosition}'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-comment\">// 'Events' => [</span>\n\t\t<span class=\"hljs-comment\">//\t[</span>\n\t\t<span class=\"hljs-comment\">//\t\t'Title' => 'Automation',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'Description' => 'Some description of the automation event',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerName' => '__Event1SpeakersSpeakerName__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'BlockStart' => '__Event1Speakers.BLOCK_START__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'BlockEnd' => '__Event1Speakers.BLOCK_END__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerCompany' => '__Event1SpeakersSpeakerCompany__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerPosition' => '__Event1SpeakersSpeakerPosition__',</span>\n\t\t<span class=\"hljs-comment\">//\t],</span>\n\t\t<span class=\"hljs-comment\">//\t[</span>\n\t\t<span class=\"hljs-comment\">//\t\t'Title' => 'Documents',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'Description' => 'This event is about document procession',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'BlockStart' => '__Event2Speakers.BLOCK_START__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'BlockEnd' => '__Event2Speakers.BLOCK_END__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerName' => '__Event2SpeakersSpeakerName__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerCompany' => '__Event2SpeakersSpeakerCompany__',</span>\n\t\t<span class=\"hljs-comment\">//\t\t'SpeakerPosition' => '__Event2SpeakersSpeakerPosition__',</span>\n\t\t<span class=\"hljs-comment\">//\t],</span>\n\t\t<span class=\"hljs-comment\">//],</span>\n\t\t<span class=\"hljs-string\">'EventsEventTitle'</span> => <span class=\"hljs-string\">'Events.Event.Title'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventDescription'</span> => <span class=\"hljs-string\">'Events.Event.Description'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventSpeakerName'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerName'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventBlockStart'</span> => <span class=\"hljs-string\">'Events.Event.BlockStart'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventBlockEnd'</span> => <span class=\"hljs-string\">'Events.Event.BlockEnd'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventSpeakerCompany'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerCompany'</span>,\n\t\t<span class=\"hljs-string\">'EventsEventSpeakerPosition'</span> => <span class=\"hljs-string\">'Events.Event.SpeakerPosition'</span>,\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Name'</span>,\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Company'</span>,\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span> => <span class=\"hljs-string\">'Event1Speakers.Speaker.Position'</span>,\n\t\t<span class=\"hljs-string\">'Event1Speakers'</span> => [\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Ivan Petrov'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Cool Ltd.'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Core developer'</span>,\n\t\t\t],\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Igor Milov'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Cool Ltd.'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Product Manager'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'Event2Speakers'</span> => [\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Sergey Ivanov'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Company'</span> => <span class=\"hljs-string\">'Devils corp.'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Position'</span> => <span class=\"hljs-string\">'Chief'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Name'</span>,\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Company'</span>,\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span> => <span class=\"hljs-string\">'Event2Speakers.Speaker.Position'</span>,\n\t],\n\t<span class=\"hljs-string\">'fields'</span> => [\n\t\t<span class=\"hljs-string\">'Events'</span> => [\n\t\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Event'</span>,\n\t\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'Event1Speakers'</span> => [\n\t\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Speaker'</span>,\n\t\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'Event2Speakers'</span> => [\n\t\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Speaker'</span>,\n\t\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerName'</span>],\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerCompany'</span>],\n\t\t<span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event1SpeakersSpeakerPosition'</span>],\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerName'</span>],\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerCompany'</span>],\n\t\t<span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span> => [<span class=\"hljs-string\">'TITLE'</span> => <span class=\"hljs-string\">'Event2SpeakersSpeakerPosition'</span>]\n\t]\n];\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$action</span>-><span class=\"hljs-title function_ invoke__\">run</span>(<span class=\"hljs-variable\">$data</span>, <span class=\"hljs-string\">'document'</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<pre>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</pre>'</span>;",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__examples__document-table-data.html",
+      "type": "guide",
+      "title": "Генерация документа с табличными данными",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/examples/document-table-data.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__examples__document-table-data.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n\t<span class=\"hljs-string\">'templateId'</span> => <span class=\"hljs-number\">203</span>,\n\t<span class=\"hljs-string\">'providerClassName'</span> => <span class=\"hljs-string\">'\\\\Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>,\n\t<span class=\"hljs-string\">'value'</span> => <span class=\"hljs-number\">1</span>,\n\t<span class=\"hljs-string\">'values'</span> => [\n\t\t<span class=\"hljs-string\">'Table'</span> => [\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Item name 1'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Price'</span> => <span class=\"hljs-string\">'$111.23'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Image'</span> => <span class=\"hljs-string\">'http://myrestapp.com/upload/stamp.png'</span>\n\t\t\t],\n\t\t\t[\n\t\t\t\t<span class=\"hljs-string\">'Name'</span> => <span class=\"hljs-string\">'Item name 2'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Price'</span> => <span class=\"hljs-string\">'$222.34'</span>,\n\t\t\t\t<span class=\"hljs-string\">'Image'</span> => <span class=\"hljs-string\">'http://myrestapp.com/upload/stamp.png'</span>\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'TableItemName'</span> => <span class=\"hljs-string\">'Table.Item.Name'</span>,\n\t\t<span class=\"hljs-string\">'TableItemImage'</span> => <span class=\"hljs-string\">'Table.Item.Image'</span>,\n\t\t<span class=\"hljs-string\">'TableItemPrice'</span> => <span class=\"hljs-string\">'Table.Item.Price'</span>,\n\t\t<span class=\"hljs-string\">'TableIndex'</span> => <span class=\"hljs-string\">'Table.INDEX'</span>,\n\t],\n\t<span class=\"hljs-string\">'fields'</span> => [\n\t\t<span class=\"hljs-string\">'Table'</span> => [\n\t\t\t<span class=\"hljs-string\">'PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\ArrayDataProvider'</span>,\n\t\t\t<span class=\"hljs-string\">'OPTIONS'</span> => [\n\t\t\t\t<span class=\"hljs-string\">'ITEM_NAME'</span> => <span class=\"hljs-string\">'Item'</span>,\n\t\t\t\t<span class=\"hljs-string\">'ITEM_PROVIDER'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>,\n\t\t\t],\n\t\t],\n\t\t<span class=\"hljs-string\">'TableItemImage'</span> => [<span class=\"hljs-string\">'TYPE'</span> => <span class=\"hljs-string\">'IMAGE'</span>],\n\t],\n];\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.document.add/'</span>;",
+          "language": ""
+        },
+        {
+          "code": "fields[<span class=\"hljs-string\">'Table'</span>][<span class=\"hljs-string\">'OPTIONS'</span>][<span class=\"hljs-string\">'ITEM_PROVIDER'</span>] = <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\HashDataProvider'</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__examples__index.html",
+      "type": "guide",
+      "title": "Генерация простого документа",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/examples/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__examples__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n    <span class=\"hljs-string\">'templateId'</span> => <span class=\"hljs-number\">203</span>,\n    <span class=\"hljs-string\">'providerClassName'</span> => <span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>,\n    <span class=\"hljs-string\">'value'</span> => <span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-string\">'values'</span> => [\n        <span class=\"hljs-string\">'SomeDate'</span> => <span class=\"hljs-string\">'14.02.2018'</span>,\n        <span class=\"hljs-string\">'SomeName'</span> => <span class=\"hljs-string\">'Горелкин Владислав'</span>,\n    ],\n];\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.document.add/'</span>;",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__index.html",
+      "type": "guide",
+      "title": "О генераторе документов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-add.html",
+      "type": "method",
+      "title": "Добавить нумератор documentgenerator.numerator.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/document-generator-numerator-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-add.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-title class_\">\\Bitrix\\Main\\Loader</span>::<span class=\"hljs-title function_ invoke__\">includeModule</span>(<span class=\"hljs-string\">'rest'</span>);\n<span class=\"hljs-variable\">$client</span> = <span class=\"hljs-keyword\">new</span> <span class=\"hljs-title class_\">\\Bitrix\\Main\\Web\\HttpClient</span>();\n<span class=\"hljs-variable\">$webHookUrl</span> = <span class=\"hljs-string\">'http://mycrm.bitrix24.com/rest/1/webhookkey/'</span>;\n<span class=\"hljs-variable\">$prefix</span> = <span class=\"hljs-string\">'documentgenerator'</span>;\n\n<span class=\"hljs-variable\">$data</span> = [\n    <span class=\"hljs-string\">'fields'</span> => [\n        <span class=\"hljs-string\">'name'</span> => <span class=\"hljs-string\">'Rest Numerator'</span>,\n        <span class=\"hljs-string\">'template'</span> => <span class=\"hljs-string\">'{NUMBER}'</span>,\n        <span class=\"hljs-string\">'settings'</span> => [\n            <span class=\"hljs-string\">'Bitrix_Main_Numerator_Generator_SequentNumberGenerator'</span> => [\n                <span class=\"hljs-string\">'start'</span> => <span class=\"hljs-string\">'0'</span>,\n                <span class=\"hljs-string\">'step'</span> => <span class=\"hljs-string\">'1'</span>,\n            ],\n        ],\n    ],\n];\n\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.numerator.add/'</span>;\n<span class=\"hljs-variable\">$answer</span> = <span class=\"hljs-variable\">$client</span>-><span class=\"hljs-title function_ invoke__\">post</span>(<span class=\"hljs-variable\">$url</span>, <span class=\"hljs-variable\">$data</span>);\n<span class=\"hljs-keyword\">try</span>\n{\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">\\Bitrix\\Main\\Web\\Json</span>::<span class=\"hljs-title function_ invoke__\">decode</span>(<span class=\"hljs-variable\">$answer</span>);\n}\n<span class=\"hljs-keyword\">catch</span>(<span class=\"hljs-built_in\">Exception</span> <span class=\"hljs-variable\">$e</span>)\n{\n    <span class=\"hljs-title function_ invoke__\">var_dump</span>(<span class=\"hljs-variable\">$answer</span>);\n}\n\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);",
+          "language": ""
+        },
+        {
+          "code": "[result] => <span class=\"hljs-title function_ invoke__\">Array</span>\n    (\n        [numerator] => <span class=\"hljs-title function_ invoke__\">Array</span>\n            (\n                [name] => <span class=\"hljs-keyword\">new</span> rest numerator\n                [template] => {NUMBER}\n                [id] => <span class=\"hljs-number\">68</span>\n                [settings] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [Bitrix_Main_Numerator_Generator_SequentNumberGenerator] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                            (\n                                [start] => <span class=\"hljs-number\">0</span>\n                                [step] => <span class=\"hljs-number\">1</span>\n                                [periodicBy] =>\n                                [timezone] =>\n                                [isDirectNumeration] =>\n                            )\n\n                    )\n\n            )\n    )",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-delete.html",
+      "type": "method",
+      "title": "Удалить нумератор documentgenerator.numerator.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/document-generator-numerator-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-delete.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-get.html",
+      "type": "method",
+      "title": "Получить нумератор по идентификатору documentgenerator.numerator.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/document-generator-numerator-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-get.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"numerator\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// id шаблона</span>\n    <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// название</span>\n    <span class=\"hljs-attr\">\"template\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"{NUMBER}\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// шаблон</span>\n    <span class=\"hljs-attr\">\"settings\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// настройки генераторов</span>\n        <span class=\"hljs-attr\">\"Bitrix_Main_Numerator_Generator_SequentNumberGenerator\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n            <span class=\"hljs-attr\">\"start\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">20</span><span class=\"hljs-punctuation\">,</span>\n            <span class=\"hljs-attr\">\"step\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">5</span><span class=\"hljs-punctuation\">,</span>\n            <span class=\"hljs-attr\">\"periodicBy\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n            <span class=\"hljs-attr\">\"timezone\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n            <span class=\"hljs-attr\">\"isDirectNumeration\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-list.html",
+      "type": "method",
+      "title": "Получить список нумераторов documentgenerator.numerator.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/document-generator-numerator-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-list.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"numerators\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n\t<span class=\"hljs-number\">0</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// id шаблона</span>\n\t\t<span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// название</span>\n\t\t<span class=\"hljs-attr\">\"template\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"{NUMBER}\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// шаблон</span>\n\t\t<span class=\"hljs-attr\">\"settings\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// настройки генераторов</span>\n\t\t\t<span class=\"hljs-attr\">\"Bitrix_Main_Numerator_Generator_SequentNumberGenerator\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t\t\t<span class=\"hljs-attr\">\"start\"</span><span class=\"hljs-punctuation\">:</span>  <span class=\"hljs-number\">20</span><span class=\"hljs-punctuation\">,</span>\n\t\t\t\t<span class=\"hljs-attr\">\"step\"</span><span class=\"hljs-punctuation\">:</span>  <span class=\"hljs-number\">5</span><span class=\"hljs-punctuation\">,</span>\n\t\t\t\t<span class=\"hljs-attr\">\"periodicBy\"</span><span class=\"hljs-punctuation\">:</span> ''<span class=\"hljs-punctuation\">,</span>  \n\t\t\t\t<span class=\"hljs-attr\">\"timezone\"</span><span class=\"hljs-punctuation\">:</span> ''<span class=\"hljs-punctuation\">,</span>  \n\t\t\t\t<span class=\"hljs-attr\">\"isDirectNumeration\"</span><span class=\"hljs-punctuation\">:</span> ''  \n\t\t\t<span class=\"hljs-punctuation\">}</span>\t\n\t\t<span class=\"hljs-punctuation\">}</span>\n\t<span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">]</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-update.html",
+      "type": "method",
+      "title": "Изменить нумератор documentgenerator.numerator.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/document-generator-numerator-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__document-generator-numerator-update.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__numerators__index.html",
+      "type": "guide",
+      "title": "Обзорм методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/numerators/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__numerators__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-add.html",
+      "type": "method",
+      "title": "Добавить страну documentgenerator.region.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/document-generator-region-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-add.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"region\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Турция\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"languageId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"formatDate\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"formatDatetime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD HH:MI:SS\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"formatName\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#LAST_NAME# #NAME# #SECOND_NAME#\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"phrases\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"TAX_INCLUDED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"НДС включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"TAX_NOT_INCLUDED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"НДС не включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"TAX_INCLUDED_NOT_VAT\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Налог (не НДС) включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"TAX_NOT_INCLUDED_NOT_VAT\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Налог (не НДС) не включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"UF_TYPE_BOOLEAN_YES\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Да\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"UF_TYPE_BOOLEAN_NO\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Нет\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-delete.html",
+      "type": "method",
+      "title": "Удалить страну documentgenerator.region.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/document-generator-region-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-delete.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-get.html",
+      "type": "method",
+      "title": "Получить страну по идентификатору documentgenerator.region.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/document-generator-region-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-get.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"region\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Турция\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"languageId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"formatDate\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"formatDatetime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD HH:MI:SS\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"formatName\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#LAST_NAME# #NAME# #SECOND_NAME#\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"phrases\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"TAX_INCLUDED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"НДС включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"TAX_NOT_INCLUDED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"НДС не включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"TAX_INCLUDED_NOT_VAT\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Налог (не НДС) включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"TAX_NOT_INCLUDED_NOT_VAT\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Налог (не НДС) не включен в цену\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"UF_TYPE_BOOLEAN_YES\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Да\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"UF_TYPE_BOOLEAN_NO\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Нет\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-list.html",
+      "type": "method",
+      "title": "Получить список стран documentgenerator.region.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/document-generator-region-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-list.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"regions\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-attr\">\"uk\"</span><span class=\"hljs-punctuation\">:</span><span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// предустановленный регион</span>\n\t\t<span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"uk\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Великобритания\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"languageId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"en\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"1\"</span><span class=\"hljs-punctuation\">:</span><span class=\"hljs-punctuation\">{</span> <span class=\"hljs-comment\">// пользовательский регион</span>\n\t\t<span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"title\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Турция asdf\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"languageId\"</span><span class=\"hljs-punctuation\">:</span><span class=\"hljs-string\">\" \"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"formatDate\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"formatDatetime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"YYYY-MM-DD HH:MI:SS\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"formatName\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"#LAST_NAME# #NAME# #SECOND_NAME#\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-update.html",
+      "type": "method",
+      "title": "Изменить страну documentgenerator.region.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/document-generator-region-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__document-generator-region-update.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__region__index.html",
+      "type": "guide",
+      "title": "Зачем нужны страны в генераторе документов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/region/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__region__index.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-add.html",
+      "type": "method",
+      "title": "Добавить роль documentgenerator.role.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-add.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"permissions\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-attr\">\"settings\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"templates\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"documents\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"view\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-delete.html",
+      "type": "method",
+      "title": "Удалить роль documentgenerator.role.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-delete.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-fill-accesses.html",
+      "type": "method",
+      "title": "Привязать пользователей к ролям documentgenerator.role.fillaccesses",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-fill-accesses.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-fill-accesses.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"accesses\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n\t<span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"roleId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"accessCode\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"U1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// привязать к пользователю с ИД 1</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"roleId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"accessCode\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"D1\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// привязать к отделу с ИД 1</span>\n\t<span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">]</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-get.html",
+      "type": "method",
+      "title": "Получить роль по идентификатору documentgenerator.role.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-get.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"role\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Администратор\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ADMIN\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"permissions\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"settings\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"templates\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"documents\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t\t<span class=\"hljs-attr\">\"view\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-list.html",
+      "type": "method",
+      "title": "Получить список ролей documentgenerator.role.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-list.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"roles\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-punctuation\">[</span>\n\t\t <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Администратор\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ADMIN\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">[</span>\n\t\t<span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Менеджер\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"MANAGER\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-update.html",
+      "type": "method",
+      "title": "Изменить роль documentgenerator.role.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/document-generator-role-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__document-generator-role-update.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"permissions\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t<span class=\"hljs-attr\">\"settings\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"templates\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-attr\">\"documents\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n\t\t<span class=\"hljs-attr\">\"modify\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t\t<span class=\"hljs-attr\">\"view\"</span> <span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"X\"</span><span class=\"hljs-punctuation\">,</span>\n\t<span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__role__index.html",
+      "type": "guide",
+      "title": "Как работают роли в генераторе документов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/role/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__role__index.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-add.html",
+      "type": "method",
+      "title": "Загрузить шаблон documentgenerator.template.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-add.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n    <span class=\"hljs-string\">'fields'</span> => [\n        <span class=\"hljs-string\">'name'</span> => <span class=\"hljs-string\">'Rest Template'</span>,\n        <span class=\"hljs-string\">'file'</span> => <span class=\"hljs-title function_ invoke__\">base64_encode</span>(<span class=\"hljs-title function_ invoke__\">file_get_contents</span>(<span class=\"hljs-variable\">$_SERVER</span>[<span class=\"hljs-string\">'DOCUMENT_ROOT'</span>].<span class=\"hljs-string\">'/upload/rest_template.docx'</span>)),\n        <span class=\"hljs-string\">'numeratorId'</span> => <span class=\"hljs-number\">1</span>,\n        <span class=\"hljs-string\">'region'</span> => <span class=\"hljs-string\">'ru'</span>,\n        <span class=\"hljs-string\">'users'</span> => [<span class=\"hljs-string\">'UA'</span>],\n        <span class=\"hljs-string\">'providers'</span> => [<span class=\"hljs-string\">'Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>],\n    ],\n];\n\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.template.add/'</span>;",
+          "language": ""
+        },
+        {
+          "code": "[result] => <span class=\"hljs-title function_ invoke__\">Array</span>\n    (\n        [template] => <span class=\"hljs-title function_ invoke__\">Array</span>\n            (\n                [id] => <span class=\"hljs-number\">203</span>\n                [name] => Rest Template\n                [region] => ru\n                [code] =>\n                [download] => <span class=\"hljs-attr\">http</span>://mycrm.bitrix24.com/bitrix/services/main/ajax.php?action=documentgenerator.template.download&id=<span class=\"hljs-number\">203</span>&ts=<span class=\"hljs-number\">1539173306</span>\n                [active] => Y\n                [moduleId] => rest\n                [numeratorId] => <span class=\"hljs-number\">1</span>\n                [withStamps] => N\n                [providers] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [bitrix\\documentgenerator\\dataprovider\\rest] => bitrix\\documentgenerator\\dataprovider\\rest\n                    )\n\n                [users] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [UA] => UA\n                    )\n\n                [isDeleted] => N\n                [sort] => <span class=\"hljs-number\">500</span>\n                [createTime] => <span class=\"hljs-number\">2018</span>-<span class=\"hljs-number\">10</span>-<span class=\"hljs-number\">10</span><span class=\"hljs-attr\">T14</span>:<span class=\"hljs-number\">08</span>:<span class=\"hljs-number\">26</span>+<span class=\"hljs-number\">02</span>:<span class=\"hljs-number\">00</span>\n                [updateTime] => <span class=\"hljs-number\">2018</span>-<span class=\"hljs-number\">10</span>-<span class=\"hljs-number\">10</span><span class=\"hljs-attr\">T14</span>:<span class=\"hljs-number\">08</span>:<span class=\"hljs-number\">26</span>+<span class=\"hljs-number\">02</span>:<span class=\"hljs-number\">00</span>\n                [downloadMachine] => <span class=\"hljs-attr\">http</span>://mycrm.bitrix24.com/rest/<span class=\"hljs-number\">1</span>/webhookkey/documentgenerator.template.download/?token=documentgenerator%<span class=\"hljs-number\">7</span>CYWN0a // тут длинная ссылка\n            )\n\n    )",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-delete.html",
+      "type": "method",
+      "title": "Удалить шаблон documentgenerator.template.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-delete.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-get-fields.html",
+      "type": "method",
+      "title": "Получить список полей шаблонов documentgenerator.template.getfields",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-get-fields.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-get-fields.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-variable\">$data</span> = [\n    <span class=\"hljs-string\">'id'</span> => <span class=\"hljs-number\">203</span>,\n    <span class=\"hljs-string\">'providerClassName'</span> => <span class=\"hljs-string\">'\\\\Bitrix\\\\DocumentGenerator\\\\DataProvider\\\\Rest'</span>,\n    <span class=\"hljs-string\">'value'</span> => <span class=\"hljs-number\">1</span>,\n];\n<span class=\"hljs-variable\">$url</span> = <span class=\"hljs-variable\">$webHookUrl</span>.<span class=\"hljs-variable\">$prefix</span>.<span class=\"hljs-string\">'.template.getfields/'</span>;",
+          "language": ""
+        },
+        {
+          "code": "[result] => <span class=\"hljs-title function_ invoke__\">Array</span>\n    (\n        [templateFields] => <span class=\"hljs-title function_ invoke__\">Array</span>\n            (\n                [DocumentNumber] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [title] => Номер\n                        [value] => <span class=\"hljs-number\">1</span>\n                        [group] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                            (\n                                [<span class=\"hljs-number\">0</span>] => Документ\n                            )\n\n                        [<span class=\"hljs-keyword\">default</span>] => <span class=\"hljs-number\">1</span>\n                    )\n                [SomeDate] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [SomeName] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [Stamp] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [Image] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [TableItemImage] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [TableItemName] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [TableItemPrice] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n                [TableIndex] => <span class=\"hljs-title function_ invoke__\">Array</span>\n                    (\n                        [value] =>\n                        [<span class=\"hljs-keyword\">default</span>] =>\n                    )\n            )\n    )",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-get.html",
+      "type": "method",
+      "title": "Получить шаблон по идентификатору documentgenerator.template.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-get.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-attr\">\"template\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// id шаблона</span>\n    <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// название</span>\n    <span class=\"hljs-attr\">\"region\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// страна</span>\n    <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// код</span>\n    <span class=\"hljs-attr\">\"download\"</span><span class=\"hljs-punctuation\">:</span> ''<span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание для пользователя</span>\n    <span class=\"hljs-attr\">\"downloadMachine\"</span><span class=\"hljs-punctuation\">:</span> ''<span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ссылка на скачивание для приложения</span>\n    <span class=\"hljs-attr\">\"active\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// активность</span>\n    <span class=\"hljs-attr\">\"moduleId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"rest\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид модуля</span>\n    <span class=\"hljs-attr\">\"numeratorId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"20\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ид нумератора</span>\n    <span class=\"hljs-attr\">\"withStamps\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// ставить печати по умолчанию</span>\n    <span class=\"hljs-attr\">\"isDeleted\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// удален или нет</span>\n    <span class=\"hljs-attr\">\"sort\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"100\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// сортировка</span>\n    <span class=\"hljs-attr\">\"createTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T13:07:12+02:00\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"updateTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-09-06T14:26:24+02:00\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"providers\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span> <span class=\"hljs-comment\">// провайдеры</span>\n        <span class=\"hljs-attr\">\"bitrix\\\\documentgenerator\\\\dataprovider\\\\rest\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"bitrix\\\\documentgenerator\\\\dataprovider\\\\rest\"</span>\n    <span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"users\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span> <span class=\"hljs-comment\">// привязанные пользователи</span>\n        <span class=\"hljs-attr\">\"0\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"UA\"</span>\n    <span class=\"hljs-punctuation\">]</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-list.html",
+      "type": "method",
+      "title": "Получить список шаблонов documentgenerator.template.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-list.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "templates<span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-number\">202</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"202\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"active\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"name\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Rest Template\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"code\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"region\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"sort\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"100\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"createTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-06-05T13:07:12+02:00\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"updateTime\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2018-09-06T14:26:24+02:00\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"moduleId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"rest\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"numeratorId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"20\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"withStamps\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"isDeleted\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"download\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"downloadMachine\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"providers\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n            <span class=\"hljs-attr\">\"bitrix\\\\documentgenerator\\\\dataprovider\\\\rest\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"bitrix\\\\documentgenerator\\\\dataprovider\\\\rest\"</span>\n        <span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"users\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span>\n            <span class=\"hljs-attr\">\"0\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"UA\"</span>\n        <span class=\"hljs-punctuation\">]</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        },
+        {
+          "code": "filter<span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n<span class=\"hljs-attr\">\"numeratorId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"20\"</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-attr\">\"region\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span><span class=\"hljs-punctuation\">,</span>\n<span class=\"hljs-attr\">\"active\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        },
+        {
+          "code": "filter<span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n<span class=\"hljs-attr\">\"moduleId\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"rest\"</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-comment\">// изменить нельзя, метод всегда вернет шаблоны только для реста</span>\n<span class=\"hljs-attr\">\"isDeleted\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span> <span class=\"hljs-comment\">// если нужен список шаблонов без учета isDeleted, необходимо передать \"@isDeleted\": [\"Y\", \"N\"]</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-update.html",
+      "type": "method",
+      "title": "Изменить шаблон documentgenerator.template.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/document-generator-template-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__document-generator-template-update.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__document-generator__templates__index.html",
+      "type": "guide",
+      "title": "Шаблоны в генераторе документов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/document-generator/templates/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "document-generator"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__document-generator__templates__index.html.md",
+      "meta": {
+        "scope": [
+          "documentgenerator"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    }
+  ]
+}

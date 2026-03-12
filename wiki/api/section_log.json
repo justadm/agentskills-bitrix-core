@@ -1,0 +1,820 @@
+{
+  "version": "1.0",
+  "section": "log",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__blogcomment__index.html",
+      "type": "guide",
+      "title": "Комментарии к сообщениям Ленты: обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/blogcomment/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__blogcomment__index.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "в зависимости от метода"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-add.html",
+      "type": "method",
+      "title": "Добавить комментарий к сообщению log.blogcomment.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/blogcomment/log-blogcomment-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-add.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "POST_ID*",
+          "type": "integer",
+          "description": "Идентификатор сообщения Ленты новостей.\nИдентификатор сообщения можно получить с помощью метода log.blogpost.get"
+        },
+        {
+          "name": "TEXT*",
+          "type": "string",
+          "description": "Текст комментария. Учитывается при проверке на дублирование и сохраняется в поле POST_TEXT"
+        },
+        {
+          "name": "FILES",
+          "type": "array",
+          "description": "Массив файлов, который описан по правилам работы с файлами. Файлы будут загружены на Диск пользователя и привязаны к комментарию"
+        },
+        {
+          "name": "USER_ID",
+          "type": "integer",
+          "description": "Идентификатор пользователя, от имени которого публикуется комментарий. Доступно только администраторам. По умолчанию используется текущий пользователь, инициировавший вызов метода.\nИдентификатор пользователя можно получить с помощью метода user.get или user.search"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "integer",
+          "description": "Идентификатор созданного комментария"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"POST_ID\":403,\"TEXT\":\"Комментарий к посту\",\"USER_ID\":27,\"FILES\":[[\"example.txt\",\"SXQncyBhIHRlc3QgZmlsZSBmb3IgQml0cml4IFJlc3QgQVBJLg==\"]]}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/log.blogcomment.add",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"POST_ID\":403,\"TEXT\":\"Комментарий к посту\",\"USER_ID\":27,\"FILES\":[[\"example.txt\",\"SXQncyBhIHRlc3QgZmlsZSBmb3IgQml0cml4IFJlc3QgQVBJLg==\"]],\"auth\":\"**put_access_token_here**\"}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/log.blogcomment.add",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'log.blogcomment.add'</span>,\n    {\n      <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">403</span>,\n      <span class=\"hljs-attr\">TEXT</span>: <span class=\"hljs-string\">'Комментарий к посту'</span>,\n      <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">27</span>,\n      <span class=\"hljs-attr\">FILES</span>: [\n        [\n          <span class=\"hljs-string\">'example.txt'</span>,\n          <span class=\"hljs-string\">'SXQncyBhIHRlc3QgZmlsZSBmb3IgQml0cml4IFJlc3QgQVBJLg=='</span>,\n        ],\n      ],\n    }\n  );\n\n  <span class=\"hljs-keyword\">const</span> { result } = response.<span class=\"hljs-title function_\">getData</span>();\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Created comment:'</span>, result);\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error adding comment:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogcomment.add'</span>,\n            [\n                <span class=\"hljs-string\">'POST_ID'</span> => <span class=\"hljs-number\">403</span>,\n                <span class=\"hljs-string\">'TEXT'</span>    => <span class=\"hljs-string\">'Комментарий к посту'</span>,\n                <span class=\"hljs-string\">'USER_ID'</span> => <span class=\"hljs-number\">27</span>,\n                <span class=\"hljs-string\">'FILES'</span>   => [\n                    [\n                        <span class=\"hljs-string\">'example.txt'</span>,\n                        <span class=\"hljs-string\">'SXQncyBhIHRlc3QgZmlsZSBmb3IgQml0cml4IFJlc3QgQVBJLg=='</span>,\n                    ],\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Created comment ID: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>();\n    }\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$exception</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding blog comment: '</span> . <span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'log.blogcomment.add'</span>, {\n    <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">403</span>,\n    <span class=\"hljs-attr\">TEXT</span>: <span class=\"hljs-string\">'Комментарий к посту'</span>,\n    <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">27</span>,\n    <span class=\"hljs-attr\">FILES</span>: [\n        [\n            <span class=\"hljs-string\">'example.txt'</span>,\n            <span class=\"hljs-string\">'SXQncyBhIHRlc3QgZmlsZSBmb3IgQml0cml4IFJlc3QgQVBJLg=='</span>,\n        ],\n    ]\n}, \n<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>) {\n        <span class=\"hljs-keyword\">if</span> (result.<span class=\"hljs-title function_\">error</span>()) {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        } <span class=\"hljs-keyword\">else</span> {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-delete.html",
+      "type": "method",
+      "title": "Удалить комментарий из сообщению log.blogcomment.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/blogcomment/log-blogcomment-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-delete.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "автор комментария или пользователь с полными правами на запись"
+      },
+      "params": [
+        {
+          "name": "COMMENT_ID*",
+          "type": "integer",
+          "description": "Идентификатор комментария. Значение должно быть больше 0.\nИдентификатор комментария можно получить с помощью метода log.blogcomment.add"
+        },
+        {
+          "name": "USER_ID",
+          "type": "integer",
+          "description": "Идентификатор пользователя, от имени которого выполняется удаление. Доступно только администраторам. По умолчанию используется текущий пользователь, инициировавший вызов.\nИдентификатор пользователя можно получить с помощью метода user.get или user.search"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Корневой элемент ответа, содержит true в случае успеха"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"COMMENT_ID\":197,\"USER_ID\":503}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/log.blogcomment.delete",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"COMMENT_ID\":197,\"USER_ID\":503,\"auth\":\"**put_access_token_here**\"}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/log.blogcomment.delete",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n        <span class=\"hljs-string\">'log.blogcomment.delete'</span>,\n        {\n            <span class=\"hljs-attr\">COMMENT_ID</span>: <span class=\"hljs-number\">197</span>,\n            <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">503</span>,\n        }\n    );\n\n    <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n    <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogcomment.delete'</span>,\n            [\n                <span class=\"hljs-string\">'COMMENT_ID'</span> => <span class=\"hljs-number\">197</span>,\n                <span class=\"hljs-string\">'USER_ID'</span> => <span class=\"hljs-number\">503</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Deleted: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$exception</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting comment: '</span> . <span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'log.blogcomment.delete'</span>,\n    {\n        <span class=\"hljs-attr\">COMMENT_ID</span>: <span class=\"hljs-number\">197</span>,\n        <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">503</span>,\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>) {\n        <span class=\"hljs-keyword\">if</span> (result.<span class=\"hljs-title function_\">error</span>()) {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        } <span class=\"hljs-keyword\">else</span> {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-user-get.html",
+      "type": "method",
+      "title": "Получить комментарии пользователя log.blogcomment.user.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/blogcomment/log-blogcomment-user-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__blogcomment__log-blogcomment-user-get.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "USER_ID",
+          "type": "integer",
+          "description": "Идентификатор пользователя, чьи комментарии нужно получить. Если идентификатор не указан, метод вернет комментарии текущего пользователя.\nЕсли запрос выполняется администратором за другого пользователя, в ответе поле text может быть пустым.\nИдентификатор пользователя можно получить с помощью метода user.get или user.search"
+        },
+        {
+          "name": "FIRST_ID",
+          "type": "integer",
+          "description": "Метод вернет комментарии с идентификаторами, которые больше указанного значения"
+        },
+        {
+          "name": "LAST_ID",
+          "type": "integer",
+          "description": "Метод вернет комментарии с идентификаторами, которые меньше указанного значения"
+        },
+        {
+          "name": "LIMIT",
+          "type": "integer",
+          "description": "Количество записей в ответе. Допустимое значение — от 1 до 100.  По умолчанию возвращается 100 комментариев"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Корневой объект ответа. Содержит массив комментариев и информацию о прикрепленных файлах"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"USER_ID\":28,\"FIRST_ID\":215,\"LAST_ID\":216}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/log.blogcomment.user.get",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\"USER_ID\":28,\"FIRST_ID\":215,\"LAST_ID\":216,\"auth\":\"**put_access_token_here**\"}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/log.blogcomment.user.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'log.blogcomment.user.get'</span>,\n    {\n      <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">28</span>,\n      <span class=\"hljs-attr\">FIRST_ID</span>: <span class=\"hljs-number\">215</span>,\n      <span class=\"hljs-attr\">LAST_ID</span>: <span class=\"hljs-number\">216</span>,\n    }\n  );\n\n  <span class=\"hljs-keyword\">const</span> { result } = response.<span class=\"hljs-title function_\">getData</span>();\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Comments:'</span>, result);\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error getting comments:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogcomment.user.get'</span>,\n            [\n                <span class=\"hljs-string\">'USER_ID'</span> => <span class=\"hljs-number\">28</span>,\n                <span class=\"hljs-string\">'FIRST_ID'</span> => <span class=\"hljs-number\">215</span>,\n                <span class=\"hljs-string\">'LAST_ID'</span> => <span class=\"hljs-number\">216</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Comments: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$exception</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting blog comments: '</span> . <span class=\"hljs-variable\">$exception</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'log.blogcomment.user.get'</span>, {\n    <span class=\"hljs-attr\">USER_ID</span>: <span class=\"hljs-number\">28</span>,\n    <span class=\"hljs-attr\">FIRST_ID</span>: <span class=\"hljs-number\">215</span>,\n    <span class=\"hljs-attr\">LAST_ID</span>: <span class=\"hljs-number\">216</span>\n},\n<span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>) {\n        <span class=\"hljs-keyword\">if</span> (result.<span class=\"hljs-title function_\">error</span>()) {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        } <span class=\"hljs-keyword\">else</span> {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__events__index.html",
+      "type": "guide",
+      "title": "Обзор событий при работе с Лентой новостей",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/events/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__events__index.html.md",
+      "meta": {
+        "scope": [
+          "sonet"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-add.html",
+      "type": "guide",
+      "title": "Событие на добавление сообщения в Ленту новостей OnLiveFeedPostAdd",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/events/on-live-feed-post-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-add.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONLIVEFEEDPOSTADD\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"event_handler_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"727\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"FIELDS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n            <span class=\"hljs-attr\">\"POST_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"209\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1742999507\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"access_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"s6p6eclrvim6da22ft9ch94ekreb52lv\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"expires_in\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"3600\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"scope\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"log\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.com\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"status\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"L\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.com/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"refresh_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"4s386p3q0tr8dy89xvmt96234v3dljg8\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"51856fefc120afa4b628cc82d3935cce\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-delete.html",
+      "type": "guide",
+      "title": "Событие на удаление сообщения из Ленты новостей OnLiveFeedPostDelete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/events/on-live-feed-post-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-delete.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONLIVEFEEDPOSTDELETE\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"event_handler_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"729\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"FIELDS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n            <span class=\"hljs-attr\">\"POST_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"209\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1742999814\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"access_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"s6p6eclrvim6da22ft9ch94ekreb52lv\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"expires_in\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"3600\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"scope\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"log\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.com\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"status\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"L\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.com/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"refresh_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"4s386p3q0tr8dy89xvmt96234v3dljg8\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"51856fefc120afa4b628cc82d3935cce\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-update.html",
+      "type": "guide",
+      "title": "Событие на изменение сообщения в Ленте новостей OnLiveFeedPostUpdate",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/events/on-live-feed-post-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__events__on-live-feed-post-update.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONLIVEFEEDPOSTUPDATE\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"event_handler_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"731\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"FIELDS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n            <span class=\"hljs-attr\">\"POST_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"205\"</span>\n        <span class=\"hljs-punctuation\">}</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1743000379\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"access_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"s6p6eclrvim6da22ft9ch94ekreb52lv\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"expires_in\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"3600\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"scope\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"log\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.com\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"status\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"L\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.com/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"refresh_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"4s386p3q0tr8dy89xvmt96234v3dljg8\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"51856fefc120afa4b628cc82d3935cce\"</span>\n\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__index.html",
+      "type": "guide",
+      "title": "Лента новостей: обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__index.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-add.html",
+      "type": "method",
+      "title": "Добавить сообщение в Ленту новостей от имени текущего пользователя log.blogpost.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-add.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'log.blogpost.add'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">POST_TITLE</span>: <span class=\"hljs-string\">'Заголовок'</span>,\n\t\t\t<span class=\"hljs-attr\">POST_MESSAGE</span>: <span class=\"hljs-string\">'Текст'</span>,\n\t\t\t<span class=\"hljs-attr\">DEST</span>: [<span class=\"hljs-string\">'SG1'</span>, <span class=\"hljs-string\">'U2'</span>]\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'OK!'</span>);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogpost.add'</span>,\n            [\n                <span class=\"hljs-string\">'POST_TITLE'</span>   => <span class=\"hljs-string\">'Заголовок'</span>,\n                <span class=\"hljs-string\">'POST_MESSAGE'</span> => <span class=\"hljs-string\">'Текст'</span>,\n                <span class=\"hljs-string\">'DEST'</span>         => [<span class=\"hljs-string\">'SG1'</span>, <span class=\"hljs-string\">'U2'</span>]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-title function_ invoke__\">alert</span>(<span class=\"hljs-string\">'OK!'</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding blog post: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'log.blogpost.add'</span>, {\n    <span class=\"hljs-attr\">POST_TITLE</span>: <span class=\"hljs-string\">'Заголовок'</span>,\n    <span class=\"hljs-attr\">POST_MESSAGE</span>: <span class=\"hljs-string\">'Текст'</span>,\n    <span class=\"hljs-attr\">DEST</span>: [<span class=\"hljs-string\">'SG1'</span>, <span class=\"hljs-string\">'U2'</span>]\n}, <span class=\"hljs-function\"><span class=\"hljs-params\">result</span> =></span> {\n    <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n    {\n        <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">error</span>());\n    }\n    <span class=\"hljs-keyword\">else</span>\n    {\n        <span class=\"hljs-title function_\">alert</span>(<span class=\"hljs-string\">'OK!'</span>);\n    }\n});",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/log.blogpost.add.json?POST_MESSAGE=Hello%2C%20world!&auth=d9a76e2929b7bc1ff21aee9c0ce7e3e2",
+          "language": "URL-запрос"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/log.blogpost.add.json?POST_MESSAGE=Hello%2C%20world!&auth=d9a76e2929b7bc1ff21aee9c0ce7e3e2",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-delete.html",
+      "type": "method",
+      "title": "Удалить сообщение Ленты новостей log.blogpost.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-delete.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-get.html",
+      "type": "method",
+      "title": "Получить доступные пользователю сообщения Ленты новостей log.blogpost.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-get.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'log.blogpost.get'</span>,\n\t\t{ <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">755</span> }\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogpost.get'</span>,\n            [\n                <span class=\"hljs-string\">'POST_ID'</span> => <span class=\"hljs-number\">755</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting blog post: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'log.blogpost.get'</span>, { <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">755</span> });",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/log.blogpost.get.xml?auth=xxxxxxx",
+          "language": "URL-запрос"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'log.blogpost.get'</span>,\n\t\t{ <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">755</span> }\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-getusers-important.html",
+      "type": "method",
+      "title": "Просмотреть пользователей, прочитавших важное сообщение log.blogpost.getusers.important",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-getusers-important.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-getusers-important.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'log.blogpost.getusers.important'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">345</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'log.blogpost.getusers.important'</span>,\n            [\n                <span class=\"hljs-string\">'POST_ID'</span> => <span class=\"hljs-number\">345</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting important blog post users: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'log.blogpost.getusers.important'</span>,\n    {\n        <span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">345</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "https://my.bitrix24.ru/rest/log.blogpost.getusers.important.json?POST_ID=345&auth=xxxxxxx",
+          "language": "URL-запрос"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'log.blogpost.getusers.important'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-attr\">POST_ID</span>: <span class=\"hljs-number\">345</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Error:'</span>, error);\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-share.html",
+      "type": "method",
+      "title": "Добавить получателей в сообщение Ленты новостей log.blogpost.share",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-share.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-share.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__log__log-blogpost-update.html",
+      "type": "method",
+      "title": "Изменить сообщение Ленты новостей log.blogpost.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/log/log-blogpost-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "log"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__log__log-blogpost-update.html.md",
+      "meta": {
+        "scope": [
+          "log"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    }
+  ]
+}

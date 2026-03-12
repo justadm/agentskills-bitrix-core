@@ -1,0 +1,321 @@
+{
+  "version": "1.0",
+  "section": "mailservice",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__index.html",
+      "type": "guide",
+      "title": "Почтовые сервисы: обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__index.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-add.html",
+      "type": "method",
+      "title": "Создать новый почтовый сервис mailservice.add",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-add.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.add\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Мой почтовый сервис'</span>,\n\t\t\t<span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.my-mail.ru'</span>,\n\t\t\t<span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n\t\t\t<span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.my-mail.ru/'</span>,\n\t\t\t<span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'500'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.add'</span>,\n            [\n                <span class=\"hljs-string\">'ACTIVE'</span>     => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'NAME'</span>       => <span class=\"hljs-string\">'Мой почтовый сервис'</span>,\n                <span class=\"hljs-string\">'SERVER'</span>     => <span class=\"hljs-string\">'imap.my-mail.ru'</span>,\n                <span class=\"hljs-string\">'PORT'</span>       => <span class=\"hljs-string\">'993'</span>,\n                <span class=\"hljs-string\">'ENCRYPTION'</span> => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'LINK'</span>       => <span class=\"hljs-string\">'https://mail.my-mail.ru/'</span>,\n                <span class=\"hljs-string\">'SORT'</span>       => <span class=\"hljs-string\">'500'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.add\"</span>,\n    {\n        <span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'Y'</span>,\n        <span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Мой почтовый сервис'</span>,\n        <span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.my-mail.ru'</span>,\n        <span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n        <span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n        <span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.my-mail.ru/'</span>,\n        <span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'500'</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.add\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Мой почтовый сервис'</span>,\n\t\t\t<span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.my-mail.ru'</span>,\n\t\t\t<span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n\t\t\t<span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.my-mail.ru/'</span>,\n\t\t\t<span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'500'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.add'</span>,\n            [\n                <span class=\"hljs-string\">'ACTIVE'</span>     => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'NAME'</span>       => <span class=\"hljs-string\">'Мой почтовый сервис'</span>,\n                <span class=\"hljs-string\">'SERVER'</span>     => <span class=\"hljs-string\">'imap.my-mail.ru'</span>,\n                <span class=\"hljs-string\">'PORT'</span>       => <span class=\"hljs-string\">'993'</span>,\n                <span class=\"hljs-string\">'ENCRYPTION'</span> => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'LINK'</span>       => <span class=\"hljs-string\">'https://mail.my-mail.ru/'</span>,\n                <span class=\"hljs-string\">'SORT'</span>       => <span class=\"hljs-string\">'500'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error adding mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-delete.html",
+      "type": "method",
+      "title": "Удалить почтовый сервис mailservice.delete",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-delete.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-delete.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.delete\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">8</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-number\">8</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.delete\"</span>,\n    {\n        <span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">8</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.delete\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">8</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.delete'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-number\">8</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error deleting mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-fields.html",
+      "type": "method",
+      "title": "Получить поля почтового сервиса mailservice.fields",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-fields.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-fields.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.fields\"</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.fields'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling mailservice.fields: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.fields\"</span>,\n    {\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.fields\"</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.fields'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling mailservice.fields: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-get.html",
+      "type": "method",
+      "title": "Получить параметры почтового сервиса mailservice.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-get.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.get\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">10</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.get'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-number\">10</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.get\"</span>,\n    {\n        <span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">10</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.get\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">10</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.get'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span> => <span class=\"hljs-number\">10</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-list.html",
+      "type": "method",
+      "title": "Получить список почтовых сервисов mailservice.list",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-list.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-list.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-comment\">// callListMethod: Получает все данные сразу. Используйте только для небольших выборок (< 1000 элементов) из-за высокой нагрузки на память.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callListMethod</span>(\n    <span class=\"hljs-string\">'mailservice.list'</span>,\n    {}\n  );\n  <span class=\"hljs-keyword\">const</span> items = response.<span class=\"hljs-title function_\">getData</span>() || [];\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> items) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}\n\n<span class=\"hljs-comment\">// fetchListMethod: Выбирает данные по частям с помощью итератора. Используйте для больших объемов данных для эффективного потребления памяти.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> generator = $b24.<span class=\"hljs-title function_\">fetchListMethod</span>(<span class=\"hljs-string\">'mailservice.list'</span>, {});\n  <span class=\"hljs-keyword\">for</span> <span class=\"hljs-title function_\">await</span> (<span class=\"hljs-keyword\">const</span> page <span class=\"hljs-keyword\">of</span> generator) {\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> page) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n  }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}\n\n<span class=\"hljs-comment\">// callMethod: Ручное управление постраничной навигацией через параметр start. Используйте для точного контроля над пакетами запросов. Для больших данных менее эффективен, чем fetchListMethod.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'mailservice.list'</span>, {}, <span class=\"hljs-number\">0</span>);\n  <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span> || [];\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> result) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.list'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling mailservice.list: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.list\"</span>,\n    {\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-comment\">// callListMethod: Получает все данные сразу. Используйте только для небольших выборок (< 1000 элементов) из-за высокой нагрузки на память.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callListMethod</span>(\n    <span class=\"hljs-string\">'mailservice.list'</span>,\n    {}\n  );\n  <span class=\"hljs-keyword\">const</span> items = response.<span class=\"hljs-title function_\">getData</span>() || [];\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> items) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}\n\n<span class=\"hljs-comment\">// fetchListMethod: Выбирает данные по частям с помощью итератора. Используйте для больших объемов данных для эффективного потребления памяти.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> generator = $b24.<span class=\"hljs-title function_\">fetchListMethod</span>(<span class=\"hljs-string\">'mailservice.list'</span>, {});\n  <span class=\"hljs-keyword\">for</span> <span class=\"hljs-title function_\">await</span> (<span class=\"hljs-keyword\">const</span> page <span class=\"hljs-keyword\">of</span> generator) {\n    <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> page) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n  }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}\n\n<span class=\"hljs-comment\">// callMethod: Ручное управление постраничной навигацией через параметр start. Используйте для точного контроля над пакетами запросов. Для больших данных менее эффективен, чем fetchListMethod.</span>\n\n<span class=\"hljs-keyword\">try</span> {\n  <span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(<span class=\"hljs-string\">'mailservice.list'</span>, {}, <span class=\"hljs-number\">0</span>);\n  <span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span> || [];\n  <span class=\"hljs-keyword\">for</span> (<span class=\"hljs-keyword\">const</span> entity <span class=\"hljs-keyword\">of</span> result) { <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(<span class=\"hljs-string\">'Entity:'</span>, entity); }\n} <span class=\"hljs-keyword\">catch</span> (error) {\n  <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(<span class=\"hljs-string\">'Request failed'</span>, error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.list'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling mailservice.list: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__mailservice__mailservice-update.html",
+      "type": "method",
+      "title": "Изменить параметры почтового сервиса mailservice.update",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/mailservice/mailservice-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "mailservice"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__mailservice__mailservice-update.html.md",
+      "meta": {
+        "scope": [
+          "mailservice"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.update\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">5</span>,\n\t\t\t<span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'N'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Почтовый сервис Yandex'</span>,\n\t\t\t<span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.yandex.ru'</span>,\n\t\t\t<span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n\t\t\t<span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.yandex.ru/'</span>,\n\t\t\t<span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'666'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.update'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span>        => <span class=\"hljs-number\">5</span>,\n                <span class=\"hljs-string\">'ACTIVE'</span>    => <span class=\"hljs-string\">'N'</span>,\n                <span class=\"hljs-string\">'NAME'</span>      => <span class=\"hljs-string\">'Почтовый сервис Yandex'</span>,\n                <span class=\"hljs-string\">'SERVER'</span>    => <span class=\"hljs-string\">'imap.yandex.ru'</span>,\n                <span class=\"hljs-string\">'PORT'</span>      => <span class=\"hljs-string\">'993'</span>,\n                <span class=\"hljs-string\">'ENCRYPTION'</span> => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'LINK'</span>      => <span class=\"hljs-string\">'https://mail.yandex.ru/'</span>,\n                <span class=\"hljs-string\">'SORT'</span>      => <span class=\"hljs-string\">'666'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"mailservice.update\"</span>,\n    {\n        <span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">5</span>,\n        <span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'N'</span>,\n        <span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Почтовый сервис Yandex'</span>,\n        <span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.yandex.ru'</span>,\n        <span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n        <span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n        <span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.yandex.ru/'</span>,\n        <span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'666'</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-property\">error</span>ы())\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        }\n        <span class=\"hljs-keyword\">else</span>\n        {\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result.<span class=\"hljs-title function_\">data</span>());\n        }\n    }\n);",
+          "language": "BX24.js"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"mailservice.update\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ID'</span>: <span class=\"hljs-number\">5</span>,\n\t\t\t<span class=\"hljs-string\">'ACTIVE'</span>: <span class=\"hljs-string\">'N'</span>,\n\t\t\t<span class=\"hljs-string\">'NAME'</span>: <span class=\"hljs-string\">'Почтовый сервис Yandex'</span>,\n\t\t\t<span class=\"hljs-string\">'SERVER'</span>: <span class=\"hljs-string\">'imap.yandex.ru'</span>,\n\t\t\t<span class=\"hljs-string\">'PORT'</span>: <span class=\"hljs-string\">'993'</span>,\n\t\t\t<span class=\"hljs-string\">'ENCRYPTION'</span>: <span class=\"hljs-string\">'Y'</span>,\n\t\t\t<span class=\"hljs-string\">'LINK'</span>: <span class=\"hljs-string\">'https://mail.yandex.ru/'</span>,\n\t\t\t<span class=\"hljs-string\">'SORT'</span>: <span class=\"hljs-string\">'666'</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">info</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": ""
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'mailservice.update'</span>,\n            [\n                <span class=\"hljs-string\">'ID'</span>        => <span class=\"hljs-number\">5</span>,\n                <span class=\"hljs-string\">'ACTIVE'</span>    => <span class=\"hljs-string\">'N'</span>,\n                <span class=\"hljs-string\">'NAME'</span>      => <span class=\"hljs-string\">'Почтовый сервис Yandex'</span>,\n                <span class=\"hljs-string\">'SERVER'</span>    => <span class=\"hljs-string\">'imap.yandex.ru'</span>,\n                <span class=\"hljs-string\">'PORT'</span>      => <span class=\"hljs-string\">'993'</span>,\n                <span class=\"hljs-string\">'ENCRYPTION'</span> => <span class=\"hljs-string\">'Y'</span>,\n                <span class=\"hljs-string\">'LINK'</span>      => <span class=\"hljs-string\">'https://mail.yandex.ru/'</span>,\n                <span class=\"hljs-string\">'SORT'</span>      => <span class=\"hljs-string\">'666'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>, <span class=\"hljs-literal\">true</span>);\n    <span class=\"hljs-comment\">// Нужная вам логика обработки данных</span>\n    <span class=\"hljs-title function_ invoke__\">processData</span>(<span class=\"hljs-variable\">$result</span>);\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error updating mail service: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": ""
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

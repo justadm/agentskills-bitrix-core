@@ -1,0 +1,2438 @@
+{
+  "version": "1.0",
+  "section": "common",
+  "entities": [
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__index.html",
+      "type": "guide",
+      "title": "Список событий",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-app-install.html",
+      "type": "guide",
+      "title": "Событие после успешной установки приложения OnAppInstall",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-app-install.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-app-install.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONAPPINSTALL\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"VERSION\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1.0.0\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"ACTIVE\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"INSTALLED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"LANGUAGE_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1696527000\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"status\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"F\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.ru/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"51856fefc120afa4b628cc82d3935cce\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-app-method-confirm.html",
+      "type": "guide",
+      "title": "Событие при получении разрешения на использование методов onAppMethodConfirm",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-app-method-confirm.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-app-method-confirm.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONAPPMETHODCONFIRM\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"TOKEN\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"fkp963yuv1ggkfbs5z3f5hy8lilm0iw6\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"METHOD\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"voximplant.user.get\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"CONFIRMED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"LANGUAGE_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1478790852\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"portal.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://portal.bitrix24.ru/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"74ef8a46a75104de55d5d4a61b98ab6d\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"c289487163b58658eae5e8b42eaf11b8\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-app-payment.html",
+      "type": "guide",
+      "title": "Событие при оплате приложения onAppPayment",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-app-payment.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-app-payment.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONAPPPAYMENT\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"CODE\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"bitrix.gds_company\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"VERSION\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"STATUS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"S\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"PAYMENT_EXPIRED\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"N\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"DAYS\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">28</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"LANGUAGE_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1466439714\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.ru/rest/\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-app-uninstall.html",
+      "type": "guide",
+      "title": "Событие при удалении приложения onAppUninstall",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-app-uninstall.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-app-uninstall.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONAPPUNINSTALL\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"LANGUAGE_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"CLEAN\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">1</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1466439714\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.ru/rest/\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"51856fefc120afa4b628cc82d3935cce\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-app-update.html",
+      "type": "guide",
+      "title": "Событие после обновления приложения OnAppUpdate",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-app-update.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-app-update.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONAPPUPDATE\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"VERSION\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2.1.0\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"PREVIOUS_VERSION\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2.0.3\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"LANGUAGE_ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ru\"</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1696527000\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"scope\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"imbot\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"access_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"lh8ze36o8ulgrljbyscr36c7ay5sinva\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"refresh_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"5f1ih5tsnsb11sc5heg3kp4ywqnjhd09\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"expires_in\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">3600</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"d41d8cd98f00b204e9800998ecf8427e\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"application_token\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"c917d38f6bdb84e9d9e0bfe9d585be73\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__events__on-user-add.html",
+      "type": "guide",
+      "title": "Событие при добавлении пользователя onUserAdd",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/events/on-user-add.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__events__on-user-add.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "<span class=\"hljs-punctuation\">{</span>\n    <span class=\"hljs-attr\">\"event\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"ONUSERADD\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"data\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"ID\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-number\">123</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"ACTIVE\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Y\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"EMAIL\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"user@example.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"NAME\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Иван\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"LAST_NAME\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Иванов\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"PERSONAL_GENDER\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"M\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"PERSONAL_BIRTHDAY\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1990-01-01\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"UF_DEPARTMENT\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">[</span><span class=\"hljs-number\">1</span><span class=\"hljs-punctuation\">,</span> <span class=\"hljs-number\">2</span><span class=\"hljs-punctuation\">]</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"DATE_REGISTER\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2024-04-05T10:00:00+03:00\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"WORK_POSITION\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"Разработчик\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"UF_EMPLOYMENT_DATE\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"2024-04-05\"</span>\n    <span class=\"hljs-punctuation\">}</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"ts\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"1466439714\"</span><span class=\"hljs-punctuation\">,</span>\n    <span class=\"hljs-attr\">\"auth\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-punctuation\">{</span>\n        <span class=\"hljs-attr\">\"domain\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"some-domain.bitrix24.ru\"</span><span class=\"hljs-punctuation\">,</span>\n        <span class=\"hljs-attr\">\"server_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://oauth.bitrix24.tech/rest/\"</span><span class=\"hljs-punctuation\">,</span> \n        <span class=\"hljs-attr\">\"client_endpoint\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"https://some-domain.bitrix24.ru/rest/\"</span><span class=\"hljs-punctuation\">,</span> \n        <span class=\"hljs-attr\">\"member_id\"</span><span class=\"hljs-punctuation\">:</span> <span class=\"hljs-string\">\"a223c6b3710f85df22e9377d6c4f7553\"</span>\n    <span class=\"hljs-punctuation\">}</span>\n<span class=\"hljs-punctuation\">}</span>",
+          "language": ""
+        }
+      ],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__index.html",
+      "type": "guide",
+      "title": "Общие методы и события",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__index.html.md",
+      "meta": {
+        "scope": [],
+        "who_can_execute": ""
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__settings__app-option-get.html",
+      "type": "method",
+      "title": "Получить привязанные к приложению данные app.option.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/settings/app-option-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__settings__app-option-get.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/app.option.get",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/app.option.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'app.option.get'</span>,\n    {\n        <span class=\"hljs-string\">\"option\"</span>:<span class=\"hljs-string\">\"data\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'app.option.get'</span>,\n    [\n        <span class=\"hljs-string\">'option'</span> => <span class=\"hljs-string\">'data'</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/app.option.get",
+          "language": ""
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__settings__app-option-set.html",
+      "type": "method",
+      "title": "Привязать данные к приложению app.option.set",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/settings/app-option-set.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__settings__app-option-set.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "администратор"
+      },
+      "params": [
+        {
+          "name": "options*",
+          "type": "array",
+          "description": "Массив, где ключ — название сохраняемого свойства, а значение — значение свойства.\nЕсли передать значение с новым ключом, то метод его запишет, а если существующее — обновит"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"options\": {\n        \"data\": \"value\",\n        \"data2\": \"value2\"\n    }\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/app.option.set",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"options\": {\n        \"data\": \"value\",\n        \"data2\": \"value2\"\n    },\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/app.option.set",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'app.option.set'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"options\"</span>: {\n\t\t\t\t<span class=\"hljs-string\">\"data\"</span>: <span class=\"hljs-string\">\"value\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"data2\"</span>: <span class=\"hljs-string\">\"value2\"</span>,\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'app.option.set'</span>,\n            [\n                <span class=\"hljs-string\">'options'</span> => [\n                    <span class=\"hljs-string\">'data'</span>  => <span class=\"hljs-string\">'value'</span>,\n                    <span class=\"hljs-string\">'data2'</span> => <span class=\"hljs-string\">'value2'</span>,\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>();\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error setting app options: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'app.option.set'</span>,\n    {\n        <span class=\"hljs-string\">\"options\"</span>: {\n            <span class=\"hljs-string\">\"data\"</span>: <span class=\"hljs-string\">\"value\"</span>,\n            <span class=\"hljs-string\">\"data2\"</span>: <span class=\"hljs-string\">\"value2\"</span>,\n        }\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__settings__index.html",
+      "type": "guide",
+      "title": "Обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/settings/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__settings__index.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__settings__user-option-get.html",
+      "type": "method",
+      "title": "Получить пользовательские данные, привязанные к приложению user.option.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/settings/user-option-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__settings__user-option-get.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/user.option.get",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/user.option.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'user.option.get'</span>,\n    {\n        <span class=\"hljs-string\">\"option\"</span>:<span class=\"hljs-string\">\"data\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">require_once</span>(<span class=\"hljs-string\">'crest.php'</span>);\n\n<span class=\"hljs-variable\">$result</span> = <span class=\"hljs-title class_\">CRest</span>::<span class=\"hljs-title function_ invoke__\">call</span>(\n    <span class=\"hljs-string\">'user.option.get'</span>,\n    [\n        <span class=\"hljs-string\">'option'</span> => <span class=\"hljs-string\">'data'</span>\n    ]\n);\n\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'<PRE>'</span>;\n<span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>);\n<span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'</PRE>'</span>;",
+          "language": "PHP"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"option\": \"data\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/user.option.get",
+          "language": ""
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__settings__user-option-set.html",
+      "type": "method",
+      "title": "Привязать данные к пользователю и приложению user.option.set",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/settings/user-option-set.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__settings__user-option-set.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "options*",
+          "type": "array",
+          "description": "Массив, где ключ — название сохраняемого свойства, а значение — значение свойства.\nЕсли передать значение с новым ключом, то метод его запишет, а если существующее — обновит"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"options\": {\n        \"data\": \"value\",\n        \"data2\": \"value2\"\n    }\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/user.option.set",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"options\": {\n        \"data\": \"value\",\n        \"data2\": \"value2\"\n    },\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/user.option.set",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'user.option.set'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"options\"</span>: {\n\t\t\t\t<span class=\"hljs-string\">\"data\"</span>: <span class=\"hljs-string\">\"value\"</span>,\n\t\t\t\t<span class=\"hljs-string\">\"data2\"</span>: <span class=\"hljs-string\">\"value2\"</span>,\n\t\t\t}\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'user.option.set'</span>,\n            [\n                <span class=\"hljs-string\">'options'</span> => [\n                    <span class=\"hljs-string\">'data'</span>  => <span class=\"hljs-string\">'value'</span>,\n                    <span class=\"hljs-string\">'data2'</span> => <span class=\"hljs-string\">'value2'</span>,\n                ],\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>();\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error setting user options: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">'user.option.set'</span>,\n    {\n        <span class=\"hljs-string\">\"options\"</span>: {\n            <span class=\"hljs-string\">\"data\"</span>: <span class=\"hljs-string\">\"value\"</span>,\n            <span class=\"hljs-string\">\"data2\"</span>: <span class=\"hljs-string\">\"value2\"</span>,\n        }\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__access-name.html",
+      "type": "method",
+      "title": "Получить названия прав доступа access.name",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/access-name.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__access-name.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "ACCESS*",
+          "type": "array",
+          "description": "Список идентификаторов прав, названия для которых нужно получить"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Объекты с описанием прав"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"ACCESS\": [\"G2\", \"AU\"]\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/access.name",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"ACCESS\": [\"G2\", \"AU\"],\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/access.name",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'access.name'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">'ACCESS'</span>: [<span class=\"hljs-string\">'G2'</span>, <span class=\"hljs-string\">'AU'</span>]\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'access.name'</span>,\n            [\n                <span class=\"hljs-string\">'ACCESS'</span> => [<span class=\"hljs-string\">'G2'</span>, <span class=\"hljs-string\">'AU'</span>]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling access.name: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"access.name\"</span>,\n    {\n        <span class=\"hljs-string\">\"ACCESS\"</span>: [<span class=\"hljs-string\">\"G2\"</span>, <span class=\"hljs-string\">\"AU\"</span>]\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__app-info.html",
+      "type": "method",
+      "title": "Показать информацию о приложении app.info",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/app-info.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__app-info.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Объект содержит информацию о приложении:\n\nID — локальный идентификатор приложения на портале\nCODE — код приложения\nVERSION — установленная версия приложения\nSTATUS — статус приложения. Возможные значения:\n\nF (Free) — бесплатное\nD (Demo) — демо-версия\nT (Trial) — триальная версия (ограниченная по времени)\nP (Paid) — оплаченное приложение\nL (Local) — локальное приложение\nS (Subscription) — подписное приложение\n\n\nINSTALLED — [true|false] cтатус установленности приложения. Если приложение не установлено, оно доступно только администраторам портала и должно сигнализировать об окончании установки при помощи вызова BX24.installFinish\nPAYMENT_EXPIRED — [Y|N] флаг, показывающий, истек ли оплаченный период или период триального использования\nDAYS — количество дней, оставшееся до конца оплаченного периода или периода триального использования\nLICENSE — обозначение тарифа с указанием региона в виде префикса.Состоит из базового языка портала и идентификатора тарифного плана. В случае с тарифами, состав которых менялся при сохранении публичного наименования (как CRM+, Команда и Компания), понять, какой именно тариф действует по этому полю нельзя. Примеры вариантов значений:\n\nru_project — тариф Проект\nru_basic — тариф Базовый\nru_std — тариф Стандартный\nru_pro100 — тариф Профессиональный\nru_ent250 — Энтерпрайз 250\nru_ent500 — Энтерпрайз 500\nru_ent1000 — Энтерпрайз 1000\nru_ent2000 — Энтерпрайз 2000\nru_ent10000 — Энтерпрайз 10000"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/app.info",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/app.info",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'app.info'</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$applicationInfoResult</span> = <span class=\"hljs-variable\">$serviceBuilder</span>-><span class=\"hljs-title function_ invoke__\">getMainScope</span>()-><span class=\"hljs-title function_ invoke__\">main</span>()-><span class=\"hljs-title function_ invoke__\">getApplicationInfo</span>();\n    <span class=\"hljs-variable\">$itemResult</span> = <span class=\"hljs-variable\">$applicationInfoResult</span>-><span class=\"hljs-title function_ invoke__\">applicationInfo</span>();\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"ID: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->ID . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Code: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->CODE . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Scope: \"</span> . <span class=\"hljs-title function_ invoke__\">json_encode</span>(<span class=\"hljs-variable\">$itemResult</span>->SCOPE, JSON_THROW_ON_ERROR) . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Version: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->VERSION . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Status: \"</span> . <span class=\"hljs-variable\">$itemResult</span>-><span class=\"hljs-title function_ invoke__\">getStatus</span>()-><span class=\"hljs-title function_ invoke__\">getStatusCode</span>() . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Installed: \"</span> . (<span class=\"hljs-variable\">$itemResult</span>->INSTALLED ? <span class=\"hljs-string\">'true'</span> : <span class=\"hljs-string\">'false'</span>) . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Payment Expired: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->PAYMENT_EXPIRED . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Days: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->DAYS . PHP_EOL);\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"License: \"</span> . <span class=\"hljs-variable\">$itemResult</span>->LICENSE . PHP_EOL);\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-keyword\">print</span>(<span class=\"hljs-string\">\"Error: \"</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>() . PHP_EOL);\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"app.info\"</span>,\n    {},\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__feature-get.html",
+      "type": "method",
+      "title": "Получить информацию о доступности функционала на портале feature.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/feature-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__feature-get.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "CODE*",
+          "type": "string",
+          "description": "Доступные ключи:\n\nrest_offline_extended — доступность офлайн-событий\nrest_auth_connector — доступность ключа auth_connector в событиях"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Объект содержит информацию о доступности метода:\n\nvalue — (Y/N) наличие функционала на портале\nlang_selfhosted — lang заменяется на en, ru, ua, kz и так далее (используется для коробочной версии Битрикс24)"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"CODE\": \"rest_offline_extended\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/feature.get",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"CODE\": \"rest_offline_extended\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/feature.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"feature.get\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"CODE\"</span>: <span class=\"hljs-string\">\"rest_offline_extended\"</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'feature.get'</span>,\n            [\n                <span class=\"hljs-string\">'CODE'</span> => <span class=\"hljs-string\">'rest_offline_extended'</span>\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting feature: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"feature.get\"</span>,\n    {\n        <span class=\"hljs-string\">\"CODE\"</span>: <span class=\"hljs-string\">\"rest_offline_extended\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__index.html",
+      "type": "guide",
+      "title": "Обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__index.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__method-get.html",
+      "type": "method",
+      "title": "Получить список доступных методов method.get",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/method-get.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__method-get.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Название метода для проверки в нижнем регистре, например user.get"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "array",
+          "description": "Возвращаются два параметра:\n\nisExisting => true/false — определяет существует ли метод именно на этом портале\nisAvailable => true/false — определяет доступность метода для вызова с текущими доступами (scope) приложения"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\n    \"name\": \"user.get\"\n}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/method.get",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H <span class=\"hljs-string\">\"Content-Type: application/json\"</span> \\\n-H <span class=\"hljs-string\">\"Accept: application/json\"</span> \\\n-d <span class=\"hljs-string\">'{\n    \"name\": \"user.get\",\n    \"auth\": \"**put_access_token_here**\"\n}'</span> \\\nhttps://**put_your_bitrix24_address**/rest/method.get",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"method.get\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"name\"</span>: <span class=\"hljs-string\">\"user.get\"</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'method.get'</span>,\n            [\n                <span class=\"hljs-string\">'name'</span> => <span class=\"hljs-string\">'user.get'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling method: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"method.get\"</span>,\n    {\n        <span class=\"hljs-string\">\"name\"</span>: <span class=\"hljs-string\">\"user.get\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__methods.html",
+      "type": "guide",
+      "title": "Получить список доступных методов methods",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/methods.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__methods.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "full",
+          "type": "boolean",
+          "description": "Если параметр принимает значение true, то метод вернет список всех методов"
+        },
+        {
+          "name": "scope",
+          "type": "string",
+          "description": "Показ методов, входящих в указанное разрешение. Если задан параметр без значения (methods?scope=&auth=xxxxx), то будут выведены все общие методы."
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "array",
+          "description": "Массив со списком разрешений"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"scope\": \"user\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/methods",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"scope\": \"user\",\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/methods",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"methods\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"scope\"</span>: <span class=\"hljs-string\">\"user\"</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'methods'</span>,\n            [\n                <span class=\"hljs-string\">'scope'</span> => <span class=\"hljs-string\">'user'</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>();\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling method: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"methods\"</span>,\n    {\n        <span class=\"hljs-string\">\"scope\"</span>: <span class=\"hljs-string\">\"user\"</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__scope.html",
+      "type": "guide",
+      "title": "Получить список доступных разрешений scope",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/scope.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__scope.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "full",
+          "type": "boolean",
+          "description": "Если параметр принимает значение true, то метод вернет полный список разрешений"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "array",
+          "description": "Массив со списком разрешений"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"full\": true\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/scope",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"full\": true,\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/scope",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"scope\"</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"full\"</span>: <span class=\"hljs-literal\">true</span>\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>(error)\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'scope'</span>,\n            [\n                <span class=\"hljs-string\">'full'</span> => <span class=\"hljs-literal\">true</span>,\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling scope method: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"scope\"</span>,\n    {\n        <span class=\"hljs-string\">\"full\"</span>: <span class=\"hljs-literal\">true</span>\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__system__server-time.html",
+      "type": "method",
+      "title": "Получить текущее время сервера server.time",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/system/server-time.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__system__server-time.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "string",
+          "description": "Время сервера в формате YYYY-MM-DDThh:mm:ss±hh:mm"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/server.time",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/server.time",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"server.time\"</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'server.time'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Server time: '</span> . <span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>();\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error getting server time: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"server.time\"</span>,\n    {},\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__users__index.html",
+      "type": "guide",
+      "title": "Обзор методов",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/users/index.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__users__index.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [],
+      "examples": [],
+      "errors": []
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__users__profile.html",
+      "type": "guide",
+      "title": "Получить базовую информацию о текущем пользователе profile",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/users/profile.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__users__profile.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "object",
+          "description": "Объект содержит информацию о пользователе"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/profile",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/profile",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">\"profile\"</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'profile'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling profile method: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"profile\"</span>,\n    {},\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__users__user-access.html",
+      "type": "method",
+      "title": "Определить набор прав пользователя user.access",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/users/user-access.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__users__user-access.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [
+        {
+          "name": "ACCESS*",
+          "type": "array",
+          "description": "Идентификатор или список идентификаторов прав, доступ к которым нужно проверить"
+        }
+      ],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Возвращается true, если текущий пользователь обладает хотя бы одним из перечисленных в параметре ACCESS прав, false — в противном случае"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"ACCESS\": [\"G2\", \"AU\"]\n}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/user.access",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"ACCESS\": [\"G2\", \"AU\"],\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/user.access",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'user.access'</span>,\n\t\t{\n\t\t\t<span class=\"hljs-string\">\"'ACCESS\"</span>: [<span class=\"hljs-string\">\"G2\"</span>, <span class=\"hljs-string\">\"AU\"</span>]\n\t\t}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'user.access'</span>,\n            [\n                <span class=\"hljs-string\">\"'ACCESS\"</span> => [<span class=\"hljs-string\">\"G2\"</span>, <span class=\"hljs-string\">\"AU\"</span>]\n            ]\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling user.access: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"user.access\"</span>,\n    {\n        <span class=\"hljs-string\">\"'ACCESS\"</span>: [<span class=\"hljs-string\">\"G2\"</span>, <span class=\"hljs-string\">\"AU\"</span>]\n    },\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    },
+    {
+      "id": "apidocs.bitrix24.ru__api-reference__common__users__user-admin.html",
+      "type": "method",
+      "title": "Определить права на управление настройками приложений user.admin",
+      "summary": "",
+      "source_url": "https://apidocs.bitrix24.ru/api-reference/common/users/user-admin.html",
+      "source_type": "web",
+      "source_repo": "",
+      "source_path": "",
+      "last_updated": "",
+      "tags": [
+        "common"
+      ],
+      "body_md_path": "/Users/just/projects/AgentSkills/Bitrix/wiki/wiki/apidocs.bitrix24.ru__api-reference__common__users__user-admin.html.md",
+      "meta": {
+        "scope": [
+          "базовый"
+        ],
+        "who_can_execute": "любой пользователь"
+      },
+      "params": [],
+      "params_nested": {},
+      "params_nested_flat": [],
+      "returns": [
+        {
+          "name": "result",
+          "type": "boolean",
+          "description": "Возвращается true, если текущий пользователь обладает правами на управление настройками приложений, false — в противном случае"
+        },
+        {
+          "name": "time",
+          "type": "time",
+          "description": "Информация о времени выполнения запроса"
+        }
+      ],
+      "examples": [
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{}' \\\nhttps://**put_your_bitrix24_address**/rest/**put_your_user_id_here**/**put_your_webhook_here**/user.admin",
+          "language": "cURL (Webhook)"
+        },
+        {
+          "code": "curl -X POST \\\n-H \"Content-Type: application/json\" \\\n-H \"Accept: application/json\" \\\n-d '{\n    \"auth\": \"**put_access_token_here**\"\n}' \\\nhttps://**put_your_bitrix24_address**/rest/user.admin",
+          "language": "cURL (OAuth)"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span>\n{\n\t<span class=\"hljs-keyword\">const</span> response = <span class=\"hljs-keyword\">await</span> $b24.<span class=\"hljs-title function_\">callMethod</span>(\n\t\t<span class=\"hljs-string\">'user.admin'</span>,\n\t\t{}\n\t);\n\t\n\t<span class=\"hljs-keyword\">const</span> result = response.<span class=\"hljs-title function_\">getData</span>().<span class=\"hljs-property\">result</span>;\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result);\n}\n<span class=\"hljs-keyword\">catch</span>( error )\n{\n\t<span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(error);\n}",
+          "language": "JS"
+        },
+        {
+          "code": "<span class=\"hljs-keyword\">try</span> {\n    <span class=\"hljs-variable\">$response</span> = <span class=\"hljs-variable\">$b24Service</span>\n        ->core\n        -><span class=\"hljs-title function_ invoke__\">call</span>(\n            <span class=\"hljs-string\">'user.admin'</span>,\n            []\n        );\n\n    <span class=\"hljs-variable\">$result</span> = <span class=\"hljs-variable\">$response</span>\n        -><span class=\"hljs-title function_ invoke__\">getResponseData</span>()\n        -><span class=\"hljs-title function_ invoke__\">getResult</span>();\n\n    <span class=\"hljs-keyword\">if</span> (<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>()) {\n        <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">error</span>());\n    } <span class=\"hljs-keyword\">else</span> {\n        <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Success: '</span> . <span class=\"hljs-title function_ invoke__\">print_r</span>(<span class=\"hljs-variable\">$result</span>-><span class=\"hljs-title function_ invoke__\">data</span>(), <span class=\"hljs-literal\">true</span>);\n    }\n\n} <span class=\"hljs-keyword\">catch</span> (<span class=\"hljs-built_in\">Throwable</span> <span class=\"hljs-variable\">$e</span>) {\n    <span class=\"hljs-title function_ invoke__\">error_log</span>(<span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>());\n    <span class=\"hljs-keyword\">echo</span> <span class=\"hljs-string\">'Error calling user.admin: '</span> . <span class=\"hljs-variable\">$e</span>-><span class=\"hljs-title function_ invoke__\">getMessage</span>();\n}",
+          "language": "PHP"
+        },
+        {
+          "code": "<span class=\"hljs-title class_\">BX24</span>.<span class=\"hljs-title function_\">callMethod</span>(\n    <span class=\"hljs-string\">\"user.admin\"</span>,\n    {},\n    <span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">result</span>)\n    {\n        <span class=\"hljs-keyword\">if</span>(result.<span class=\"hljs-title function_\">error</span>())\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">error</span>(result.<span class=\"hljs-title function_\">error</span>());\n        <span class=\"hljs-keyword\">else</span>\n            <span class=\"hljs-variable language_\">console</span>.<span class=\"hljs-title function_\">log</span>(result.<span class=\"hljs-title function_\">data</span>());\n    }\n);",
+          "language": "BX24.js"
+        }
+      ],
+      "errors": [
+        {
+          "status": "500",
+          "code": "INTERNAL_SERVER_ERROR\nInternal server error",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "ERROR_UNEXPECTED_ANSWER\nServer returned an unexpected response",
+          "description": "Возникла внутренняя ошибка сервера, обратитесь к администратору сервера или в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "QUERY_LIMIT_EXCEEDED\nToo many requests",
+          "description": "Превышен лимит на интенсивность запросов",
+          "is_system_error": true
+        },
+        {
+          "status": "405",
+          "code": "ERROR_BATCH_METHOD_NOT_ALLOWED\nMethod is not allowed for batch usage",
+          "description": "Текущий метод не разрешен для вызове с помощью batch",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "ERROR_BATCH_LENGTH_EXCEEDED\nMax batch length exceeded",
+          "description": "Превышена максимальная длина параметров, переданных в метод batch",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "NO_AUTH_FOUND\nWrong authorization data",
+          "description": "Неверный access-токен или код вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "400",
+          "code": "INVALID_REQUEST\nHttps required",
+          "description": "Для вызовов методов требуется использовать протокол HTTPS",
+          "is_system_error": true
+        },
+        {
+          "status": "503",
+          "code": "OVERLOAD_LIMIT\nREST API is blocked due to overload",
+          "description": "REST API заблокирован из-за перегрузки. Это ручная индивидуальная блокировка, для снятия необходимо обращаться в техническую поддержку Битрикс24",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "ACCESS_DENIED\nREST API is available only on commercial plans",
+          "description": "REST API доступен только на коммерческих планах",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "INVALID_CREDENTIALS\nInvalid request credentials",
+          "description": "У пользователя, с чьим access-токеном или вебхуком был вызван метод, не хватает прав",
+          "is_system_error": true
+        },
+        {
+          "status": "404",
+          "code": "ERROR_MANIFEST_IS_NOT_AVAILABLE\nManifest is not available",
+          "description": "Манифест недоступен",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "insufficient_scope\nThe request requires higher privileges than provided by the webhook token",
+          "description": "Запрос требует более высоких привилегий, чем предоставляет токен вебхука",
+          "is_system_error": true
+        },
+        {
+          "status": "401",
+          "code": "expired_token\nThe access token provided has expired",
+          "description": "Предоставленный access-токен доступа истек",
+          "is_system_error": true
+        },
+        {
+          "status": "403",
+          "code": "user_access_error\nThe user does not have access to the application",
+          "description": "Пользователь не имеет доступа к приложению. Это означает, что приложение установлено, но администратор портала разрешил доступ к этому приложению только конкретным пользователям",
+          "is_system_error": true
+        },
+        {
+          "status": "500",
+          "code": "PORTAL_DELETED\nPortal was deleted",
+          "description": "Публичная часть сайта закрыта. Чтобы открыть публичную часть сайта на коробочной установке отключите опцию «Временное закрытие публичной части сайта». Путь к настройке: Рабочий стол > Настройки > Настройки продукта > Настройки модулей > Главный модуль > Временное закрытие публичной части сайта",
+          "is_system_error": true
+        }
+      ]
+    }
+  ]
+}

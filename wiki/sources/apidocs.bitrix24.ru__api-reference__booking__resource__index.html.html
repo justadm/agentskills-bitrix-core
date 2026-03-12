@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../../../" />
+        <title>Ресурсы: обзор методов | REST API Битрикс24 и приложения для Маркет</title>
+        <meta name="generator" content="Diplodoc Platform v5.9.1">
+        <meta http-equiv="Content-Security-Policy" content="worker-src 'self';">
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        
+        <script type="application/javascript" src="_extensions/feedback-control-extension.js"></script>
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-5c42c2d82fe19c6e.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-34c68624e23be7ce.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/b24_custom.css?20241023-01"/>
+        <link type="text/css" rel="stylesheet" href="_assets/style/highlight_custom.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;Ресурсы – это объекты, которые можно забронировать: помещения, техника, услуги и так далее.&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Быстрый переход: &lt;a href=\"api-reference/booking/resource/index.html#all-methods\"&gt;все методы&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Пользовательская документация: &lt;a href=\"https://helpdesk.bitrix24.ru/open/23661822/\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Онлайн-запись: как создать новый ресурс&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\"svyaz-resursov-s-drugimi-obuektami\"&gt;&lt;a href=\"api-reference/booking/resource/index.html#svyaz-resursov-s-drugimi-obuektami\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Связь ресурсов  с другими объектами&lt;/span&gt;&lt;/a&gt;Связь ресурсов  с другими объектами&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Бронь.&lt;/strong&gt; Передавайте &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-l902oo0t\"&gt;id&lt;/code&gt; ресурсов в параметре &lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-ena6edqe\"&gt;resourceIds&lt;/code&gt; методов &lt;a href=\"api-reference/booking/booking/index.html\"&gt;booking.v1.booking.*&lt;/a&gt;. Одно бронирование может включать несколько ресурсов.&lt;/p&gt;\n&lt;h2 id=\"dopolnitelnye-nastrojki-dlya-resursov\"&gt;&lt;a href=\"api-reference/booking/resource/index.html#dopolnitelnye-nastrojki-dlya-resursov\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Дополнительные настройки для ресурсов&lt;/span&gt;&lt;/a&gt;Дополнительные настройки для ресурсов&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Тип ресурса.&lt;/strong&gt; Чтобы создать, изменить, удалить или найти тип ресурса используйте методы группы &lt;a href=\"api-reference/booking/resource/resource-type/index.html\"&gt;booking.v1.resourceType.*&lt;/a&gt;. Дополнительно методы позволяют настроить активность и шаблоны сообщений. Эти настройки применяются по умолчанию при создании ресурса указанного типа.&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Слоты.&lt;/strong&gt; Чтобы настроить время, когда ресурс доступен для бронирования, используйте методы группы &lt;a href=\"api-reference/booking/resource/slots/index.html\"&gt;booking.v1.resource.slots.*&lt;/a&gt;. Например, можно настроить доступность ресурса только по вторникам и четвергам с 11:00 до 15:00.&lt;/p&gt;\n&lt;h2 id=\"all-methods\"&gt;&lt;a href=\"api-reference/booking/resource/index.html#all-methods\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Обзор методов&lt;/span&gt;&lt;/a&gt;Обзор методов&lt;/h2&gt;\n&lt;blockquote&gt;\n&lt;p&gt;Scope: &lt;a href=\"api-reference/scopes/permissions.html\"&gt;&lt;code class=\"yfm-clipboard-inline-code\" role=\"button\" tabindex=\"0\" id=\"inline-code-id-5n3in3r1\"&gt;booking&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;Кто может выполнять метод: любой пользователь&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;table&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Метод&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;strong&gt;Описание&lt;/strong&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/booking/resource/booking-v1-resource-add.html\"&gt;booking.v1.resource.add&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Добавляет новый ресурс&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/booking/resource/booking-v1-resource-delete.html\"&gt;booking.v1.resource.delete&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Удаляет ресурс&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/booking/resource/booking-v1-resource-get.html\"&gt;booking.v1.resource.get&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Получает ресурс&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/booking/resource/booking-v1-resource-list.html\"&gt;booking.v1.resource.list&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Получает список ресурсов&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td&gt;\n&lt;p&gt;&lt;a href=\"api-reference/booking/resource/booking-v1-resource-update.html\"&gt;booking.v1.resource.update&lt;/a&gt;&lt;/p&gt;\n&lt;/td&gt;\n&lt;td&gt;\n&lt;p&gt;Обновляет ресурс&lt;/p&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;div class=\"yfm inline_code_tooltip\" id=\"tooltip_inline_clipboard_dialog\" role=\"dialog\"&gt;Скопировано&lt;/div&gt;","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.9.1"}],"style":["_assets/style/b24_custom.css?20241023-01","_assets/style/highlight_custom.css"],"script":["_assets/b24loc.js?20240925-02","_assets/b24addons.js?20241208-01"]},"headings":[{"title":"Связь ресурсов  с другими объектами","href":"api-reference/booking/resource/index.html#svyaz-resursov-s-drugimi-obuektami","level":2},{"title":"Дополнительные настройки для ресурсов","href":"api-reference/booking/resource/index.html#dopolnitelnye-nastrojki-dlya-resursov","level":2},{"title":"Обзор методов","href":"api-reference/booking/resource/index.html#all-methods","level":2}],"title":"Ресурсы: обзор методов"},"router":{"pathname":"api-reference/booking/resource/index","depth":4,"base":"../../../"},"lang":"ru","langs":["ru"],"viewerInterface":{"toc":true,"search":true,"feedback":true},"search":{"enabled":true,"provider":"local","api":"_search/api.js","link":"_search/ru/index.html"}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript">
+            window.feedbackControlExtensionInit({"endpoint":"https://util.1c-bitrix.ru/rest-doc/feedback-control.php"})
+        </script>
+        <script type="application/javascript" defer src="_search/ru/1773303603909-resources.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-0ca3ecbd78ee745e.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-5320a31c05d20641.js"></script>
+        <script type="application/javascript" defer src="_assets/b24loc.js?20240925-02"></script>
+        <script type="application/javascript" defer src="_assets/b24addons.js?20241208-01"></script>
+        
+    </body>
+</html>
